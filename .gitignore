@@ -1,0 +1,13 @@
+credentials.json
+.streamlit/secrets.toml
+*.pid
+*.log
+__pycache__/
+.DS_Store
+cloudflared
+cloudflared.tgz
+install_service.sh
+run_public.py
+streamlit_launcher.py
+streamlit_wrapper.sh
+run_lan.sh
