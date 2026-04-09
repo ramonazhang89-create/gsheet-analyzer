@@ -230,10 +230,41 @@ def build_jira_jql(projects: list[str], year: str = JIRA_YEAR) -> str:
     )
 
 
+JIRA_CACHE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "jira_cache.json")
+
+
+def _load_jira_cache() -> list[dict]:
+    """Load Jira issues from local cache file (for cloud fallback)."""
+    if not os.path.exists(JIRA_CACHE_FILE):
+        return []
+    with open(JIRA_CACHE_FILE, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    return data.get("issues", [])
+
+
+def _jira_cache_meta() -> str:
+    """Return a human-readable sync timestamp from cache, or empty string."""
+    if not os.path.exists(JIRA_CACHE_FILE):
+        return ""
+    with open(JIRA_CACHE_FILE, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    return data.get("synced_at", "")
+
+
 @st.cache_data(ttl=300)
-def fetch_jira_issues(jql: str) -> list[dict]:
-    """Search Jira issues via REST API with all required custom fields."""
-    return _jira_api_search(jql, JIRA_SEARCH_FIELDS, max_results=1500)
+def fetch_jira_issues(jql: str) -> tuple[list[dict], bool]:
+    """Search Jira issues via REST API; fall back to cache on failure.
+
+    Returns (issues, from_cache).
+    """
+    try:
+        issues = _jira_api_search(jql, JIRA_SEARCH_FIELDS, max_results=1500)
+        return issues, False
+    except Exception:
+        cached = _load_jira_cache()
+        if cached:
+            return cached, True
+        raise
 
 
 @st.cache_data(ttl=3600)
@@ -802,14 +833,19 @@ def main():
                 print(traceback.format_exc())
 
     jira_df = pd.DataFrame(columns=COMMON_COLS)
+    jira_from_cache = False
     if enable_jira:
-        with st.spinner("正在从 Jira 加载数据（REST API）…"):
+        with st.spinner("正在从 Jira 加载数据…"):
             try:
                 proj_keys = [p.strip() for p in jira_projects_input.split(",") if p.strip()]
                 all_pm_names = [pm for pms in PM_GROUPS.values() for pm in pms]
                 jql = build_jira_jql(proj_keys)
-                issues = fetch_jira_issues(jql)
+                issues, jira_from_cache = fetch_jira_issues(jql)
                 jira_df = normalize_jira(issues, allowed_pms=all_pm_names)
+                if jira_from_cache:
+                    cache_time = _jira_cache_meta()
+                    st.info(f"Jira API 不可达，已从本地缓存加载数据（同步时间: {cache_time}）。"
+                            f"本地运行 `python sync_jira.py --push` 可更新缓存。")
             except Exception as e:
                 st.warning(f"Jira 数据加载失败: {e}")
                 print(traceback.format_exc())
