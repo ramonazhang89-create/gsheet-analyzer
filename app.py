@@ -1,7 +1,10 @@
+from __future__ import annotations
+
 import traceback
 import re
 import json
 import os
+import subprocess
 
 import streamlit as st
 import gspread
@@ -27,13 +30,41 @@ SHEET_CONFIGS = {
     },
 }
 
+JIRA_PROJECTS = ["SPCB", "SPCSP"]
+JIRA_BASE_URL = "https://jira.shopee.io"
+JIRA_YEAR = "2026"
+
+JIRA_FIELD_IDS = {
+    "product_manager": "customfield_10306",
+    "estimated_prd_signoff": "customfield_36701",
+    "prd_link": "customfield_15707",
+    "product_line": "customfield_35604",
+    "project_type": "customfield_12411",
+    "prd_review_end": "customfield_11546",
+    "key_project": "customfield_29500",
+}
+
+JIRA_SEARCH_FIELDS = [
+    "summary", "status", "priority", "assignee", "components",
+    JIRA_FIELD_IDS["product_manager"],
+    JIRA_FIELD_IDS["estimated_prd_signoff"],
+    JIRA_FIELD_IDS["prd_link"],
+    JIRA_FIELD_IDS["product_line"],
+    JIRA_FIELD_IDS["project_type"],
+    JIRA_FIELD_IDS["prd_review_end"],
+    JIRA_FIELD_IDS["key_project"],
+]
+
 
 # ── Auth Gate ──────────────────────────────────────────────────────────────────
 
 def check_password() -> bool:
     """Return True if the user has entered the correct password, or if no
     password is configured (local dev)."""
-    if "password" not in st.secrets:
+    try:
+        if "password" not in st.secrets:
+            return True
+    except Exception:
         return True
 
     if st.session_state.get("authenticated"):
@@ -107,6 +138,146 @@ def fetch_feature_data(tab_name: str) -> pd.DataFrame:
     df["_source_tab"] = tab_name
     df["_source"] = "Feature"
     return df
+
+
+# ── Jira Data Loading ─────────────────────────────────────────────────────
+
+def _get_jira_token() -> str:
+    """Extract Jira PAT from Streamlit secrets or skynet-base key store."""
+    try:
+        token = st.secrets.get("jira_token", "")
+        if token:
+            return token
+    except Exception:
+        pass
+
+    try:
+        result = subprocess.run(
+            ["skynet-base", "key", "get", "JIRA_TOKEN"],
+            capture_output=True, text=True, timeout=10,
+        )
+    except FileNotFoundError:
+        raise RuntimeError(
+            "JIRA_TOKEN 未配置。本地运行: `skynet-base setup token`；"
+            "Cloud 部署: 在 Streamlit Secrets 中设置 jira_token"
+        )
+    if result.returncode != 0:
+        raise RuntimeError("JIRA_TOKEN 未配置，请在 Terminal 运行 `skynet-base setup token`")
+
+    import re as _re
+    m = _re.search(r"JIRA_TOKEN:\s*(.+)", result.stdout)
+    if not m:
+        raise RuntimeError("无法解析 JIRA_TOKEN")
+    return m.group(1).strip()
+
+
+def _jira_api_search(jql: str, fields: list[str], max_results: int = 200) -> list[dict]:
+    """Call Jira REST API v2 search with pagination."""
+    import urllib.request
+    import urllib.parse
+    import urllib.error
+
+    token = _get_jira_token()
+    all_issues: list[dict] = []
+    start_at = 0
+
+    while True:
+        params = urllib.parse.urlencode({
+            "jql": jql,
+            "fields": ",".join(fields),
+            "maxResults": min(100, max_results - len(all_issues)),
+            "startAt": start_at,
+        })
+        url = f"{JIRA_BASE_URL}/rest/api/2/search?{params}"
+        req = urllib.request.Request(url, headers={
+            "Authorization": f"Bearer {token}",
+            "Accept": "application/json",
+        })
+
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                data = json.loads(resp.read().decode())
+        except urllib.error.HTTPError as e:
+            if e.code == 401:
+                raise RuntimeError("Jira 认证失败，请运行 `skynet-base setup token` 重新配置")
+            raise RuntimeError(f"Jira API 错误 ({e.code}): {e.reason}")
+        except urllib.error.URLError as e:
+            raise RuntimeError(f"Jira 连接失败: {e.reason}")
+
+        issues = data.get("issues", [])
+        all_issues.extend(issues)
+        total = data.get("total", 0)
+
+        if len(all_issues) >= total or len(all_issues) >= max_results or not issues:
+            break
+        start_at += len(issues)
+
+    return all_issues
+
+
+def build_jira_jql(projects: list[str], year: str = JIRA_YEAR) -> str:
+    proj_clause = ", ".join(projects)
+    return (
+        f"project in ({proj_clause}) AND issuetype = Epic"
+        f' AND "Project Type" = "Feature Project"'
+        f' AND "POP Request Link" is not EMPTY'
+        f" AND status not in (Closed, Icebox)"
+        f" AND created >= {int(year) - 1}-01-01"
+        f" AND ("
+        f"priority in (Highest, High)"
+        f' OR (priority in (Medium, Low) AND "Key Project" is not EMPTY)'
+        f")"
+    )
+
+
+@st.cache_data(ttl=300)
+def fetch_jira_issues(jql: str) -> list[dict]:
+    """Search Jira issues via REST API with all required custom fields."""
+    return _jira_api_search(jql, JIRA_SEARCH_FIELDS, max_results=1500)
+
+
+@st.cache_data(ttl=3600)
+def discover_jira_fields(issue_key: str) -> dict:
+    """Read a single issue to discover all available field names."""
+    import urllib.request
+    import urllib.error
+
+    token = _get_jira_token()
+    url = f"{JIRA_BASE_URL}/rest/api/2/issue/{issue_key}"
+    req = urllib.request.Request(url, headers={
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/json",
+    })
+    try:
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            data = json.loads(resp.read().decode())
+    except Exception as e:
+        raise RuntimeError(f"读取 {issue_key} 失败: {e}")
+
+    fields = data.get("fields", {})
+    return {k: _summarize_field_value(v) for k, v in fields.items()}
+
+
+def _summarize_field_value(val) -> str:
+    if val is None:
+        return "null"
+    if isinstance(val, str):
+        return val[:100] if len(val) > 100 else val
+    if isinstance(val, dict):
+        name = val.get("name") or val.get("displayName") or val.get("value")
+        if name:
+            return str(name)
+        return json.dumps(val, ensure_ascii=False)[:100]
+    if isinstance(val, list):
+        previews = []
+        for item in val[:3]:
+            if isinstance(item, dict):
+                previews.append(item.get("name") or item.get("value") or str(item)[:40])
+            else:
+                previews.append(str(item)[:40])
+        suffix = f" +{len(val)-3} more" if len(val) > 3 else ""
+        return f"[{', '.join(str(p) for p in previews)}{suffix}]"
+    return str(val)[:100]
 
 
 # ── Helpers ────────────────────────────────────────────────────────────────────
@@ -224,6 +395,106 @@ def normalize_okr(df: pd.DataFrame) -> pd.DataFrame:
 
     out = out[(out["PM"] != "") & (out["Requirement"] != "")]
     return out[COMMON_COLS].reset_index(drop=True)
+
+
+def _jira_field_str(obj) -> str:
+    """Extract a string value from a Jira field that may be str, dict, or None."""
+    if obj is None:
+        return ""
+    if isinstance(obj, str):
+        return obj.strip()
+    if isinstance(obj, dict):
+        return (obj.get("name") or obj.get("displayName") or obj.get("value") or "").strip()
+    return str(obj).strip()
+
+
+def normalize_jira(
+    issues: list[dict],
+    allowed_pms: list[str] | None = None,
+    year: str = JIRA_YEAR,
+) -> pd.DataFrame:
+    """Normalize Jira REST API issues to COMMON_COLS.
+
+    Rules for month assignment:
+    - Past months (before current month): use PRD Review End Date,
+      require PRD Link non-empty.
+    - Current month & future: use Estimated PRD Sign Off Date,
+      PRD Link may be empty.
+    """
+    if not issues:
+        return pd.DataFrame(columns=COMMON_COLS)
+
+    from datetime import date
+    current_month = date.today().strftime("%Y-%m")
+
+    f_pm = JIRA_FIELD_IDS["product_manager"]
+    f_signoff = JIRA_FIELD_IDS["estimated_prd_signoff"]
+    f_prd_link = JIRA_FIELD_IDS["prd_link"]
+    f_product_line = JIRA_FIELD_IDS["product_line"]
+    f_prd_review_end = JIRA_FIELD_IDS["prd_review_end"]
+
+    rows: list[dict] = []
+    for issue in issues:
+        fields = issue.get("fields", {})
+        key = issue.get("key", "")
+
+        prd_link = _jira_field_str(fields.get(f_prd_link))
+        signoff_str = _jira_field_str(fields.get(f_signoff))
+        prd_review_str = _jira_field_str(fields.get(f_prd_review_end))
+
+        signoff_month = parse_review_month(signoff_str)
+        prd_review_month = parse_review_month(prd_review_str)
+
+        review_month = ""
+        if prd_review_month and prd_review_month < current_month:
+            if not prd_link:
+                continue
+            review_month = prd_review_month
+        elif signoff_month and signoff_month >= current_month:
+            review_month = signoff_month
+        elif prd_review_month:
+            if not prd_link:
+                continue
+            review_month = prd_review_month
+        elif signoff_month:
+            review_month = signoff_month
+
+        if review_month and not review_month.startswith(year):
+            continue
+
+        pm_raw = fields.get(f_pm)
+        if pm_raw is None:
+            pm_raw = fields.get("assignee")
+        pm_clean = clean_pm_name(_jira_field_str(pm_raw))
+
+        if allowed_pms and pm_clean and pm_clean not in allowed_pms:
+            continue
+
+        status_name = _jira_field_str(fields.get("status"))
+        priority_name = _jira_field_str(fields.get("priority"))
+        product_line = _jira_field_str(fields.get(f_product_line))
+
+        if not product_line:
+            components = fields.get("components") or []
+            if isinstance(components, list):
+                product_line = ", ".join(_jira_field_str(c) for c in components if _jira_field_str(c))
+
+        rows.append({
+            "PM": pm_clean,
+            "Requirement": fields.get("summary", ""),
+            "Status": status_name,
+            "Priority": priority_name,
+            "Product_Line": product_line,
+            "Ticket": key,
+            "Review_Month": review_month,
+            "PRD_Review_Month": prd_review_month or review_month,
+            "_source": "Jira",
+            "_source_tab": "Jira Search",
+        })
+
+    df = pd.DataFrame(rows, columns=COMMON_COLS)
+    df = df[(df["PM"] != "") & (df["Requirement"] != "")]
+    return df.reset_index(drop=True)
 
 
 def normalize_feature(df: pd.DataFrame) -> pd.DataFrame:
@@ -384,18 +655,32 @@ def render_pm_monthly_table(df_with_month: pd.DataFrame, all_pms: list[str], mon
     st.dataframe(styled, use_container_width=True, height=max(300, len(rows) * 36 + 60), hide_index=True)
 
 
-def render_detail_table(df: pd.DataFrame):
+def render_detail_table(df: pd.DataFrame, key_prefix: str = "dt"):
     view = df.copy()
 
-    col1, col2, col3, col4 = st.columns([1, 1, 1, 2])
-    with col1:
-        f_pm = st.multiselect("PM", sorted(view["PM"].unique()), default=[], key="dt_pm")
-    with col2:
-        f_month = st.multiselect("评审月份", sorted(view.loc[view["Review_Month"] != "", "Review_Month"].unique()), default=[], key="dt_month")
-    with col3:
-        f_status = st.multiselect("状态", sorted(view["Status"].unique()), default=[], key="dt_status")
-    with col4:
-        keyword = st.text_input("🔎 关键字搜索（需求名称）", "", key="detail_keyword")
+    has_match = "_match" in view.columns
+
+    filter_cols = [1, 1, 1, 1, 2] if has_match else [1, 1, 1, 2]
+    cols = st.columns(filter_cols)
+    idx = 0
+    with cols[idx]:
+        f_pm = st.multiselect("PM", sorted(view["PM"].unique()), default=[], key=f"{key_prefix}_pm")
+    idx += 1
+    with cols[idx]:
+        f_month = st.multiselect("评审月份", sorted(view.loc[view["Review_Month"] != "", "Review_Month"].unique()), default=[], key=f"{key_prefix}_month")
+    idx += 1
+    with cols[idx]:
+        f_status = st.multiselect("状态", sorted(view["Status"].unique()), default=[], key=f"{key_prefix}_status")
+    idx += 1
+    if has_match:
+        with cols[idx]:
+            match_options = sorted(view["_match"].unique())
+            f_match = st.multiselect("数据匹配", match_options, default=[], key=f"{key_prefix}_match")
+        idx += 1
+    else:
+        f_match = []
+    with cols[idx]:
+        keyword = st.text_input("🔎 关键字搜索（需求名称）", "", key=f"{key_prefix}_keyword")
 
     if f_pm:
         view = view[view["PM"].isin(f_pm)]
@@ -403,11 +688,14 @@ def render_detail_table(df: pd.DataFrame):
         view = view[view["Review_Month"].isin(f_month)]
     if f_status:
         view = view[view["Status"].isin(f_status)]
+    if f_match and has_match:
+        view = view[view["_match"].isin(f_match)]
     if keyword:
         view = view[view["Requirement"].str.contains(keyword, case=False, na=False)]
 
     st.caption(f"共 **{len(view)}** 条需求")
 
+    display_cols = list(COMMON_COLS)
     rename_map = {
         "PM": "PM",
         "Review_Month": "评审月份",
@@ -419,8 +707,13 @@ def render_detail_table(df: pd.DataFrame):
         "_source": "数据源",
         "_source_tab": "来源 Tab",
     }
+    if has_match:
+        display_cols.append("_match")
+        rename_map["_match"] = "数据匹配"
+
+    available_cols = [c for c in display_cols if c in view.columns]
     st.dataframe(
-        view[COMMON_COLS].rename(columns=rename_map),
+        view[available_cols].rename(columns=rename_map),
         use_container_width=True,
         height=600,
     )
@@ -442,6 +735,7 @@ def main():
     if st.sidebar.button("🔄 刷新数据（清除缓存）"):
         fetch_okr_data.clear()
         fetch_feature_data.clear()
+        fetch_jira_issues.clear()
         st.rerun()
 
     try:
@@ -469,8 +763,25 @@ def main():
         default=[t for t in ["26Q1 feature project", "26Q2 feature project"] if t in feat_quarterly],
     )
 
-    if not selected_okr and not selected_feat:
-        st.warning("请在左侧选择至少一个数据 Tab")
+    st.sidebar.markdown("---")
+    enable_jira = st.sidebar.checkbox("🔗 启用 Jira 数据源", value=True, key="enable_jira")
+    jira_discover_mode = False
+    if enable_jira:
+        with st.sidebar.expander("Jira 高级配置", expanded=False):
+            jira_projects_input = st.text_input(
+                "项目 Key（逗号分隔）",
+                value=", ".join(JIRA_PROJECTS),
+                key="jira_projects",
+            )
+            jira_discover_mode = st.checkbox(
+                "🔍 字段发现模式（调试用）",
+                value=False,
+                key="jira_discover",
+                help="读取 SPCB-53026 显示所有可用字段，用于配置自定义字段 ID",
+            )
+
+    if not selected_okr and not selected_feat and not enable_jira:
+        st.warning("请在左侧选择至少一个数据 Tab 或启用 Jira 数据源")
         return
 
     # ── Load & Normalize ─────────────────────────────────────────────────
@@ -490,11 +801,24 @@ def main():
                 st.warning(f"Feature [{tab}] 加载失败: {e}")
                 print(traceback.format_exc())
 
-    if not parts:
+    jira_df = pd.DataFrame(columns=COMMON_COLS)
+    if enable_jira:
+        with st.spinner("正在从 Jira 加载数据（REST API）…"):
+            try:
+                proj_keys = [p.strip() for p in jira_projects_input.split(",") if p.strip()]
+                all_pm_names = [pm for pms in PM_GROUPS.values() for pm in pms]
+                jql = build_jira_jql(proj_keys)
+                issues = fetch_jira_issues(jql)
+                jira_df = normalize_jira(issues, allowed_pms=all_pm_names)
+            except Exception as e:
+                st.warning(f"Jira 数据加载失败: {e}")
+                print(traceback.format_exc())
+
+    if not parts and jira_df.empty:
         st.error("所有数据源均加载失败，请检查网络与权限")
         return
 
-    df = pd.concat(parts, ignore_index=True)
+    df = pd.concat(parts, ignore_index=True) if parts else pd.DataFrame(columns=COMMON_COLS)
 
     # Deduplicate by Ticket ID (keep first occurrence, preserve rows with no ticket)
     has_ticket = df["Ticket"].str.strip().ne("")
@@ -561,10 +885,108 @@ def main():
     # ── Split by PRD review date availability ──────────────────────────
     df_with_prd_month = df[df["PRD_Review_Month"] != ""].copy()
 
-    # ── Tabs ─────────────────────────────────────────────────────────────
-    tab1, tab2, tab3 = st.tabs(["📈 评审需求汇总", "📅 PRD 评审汇总", "📋 需求明细"])
+    # ── Build merged detail table with match status ─────────────────────
+    def build_merged_detail(gs_df: pd.DataFrame, jira_df: pd.DataFrame) -> pd.DataFrame:
+        gs = gs_df.copy()
+        jr = jira_df.copy()
+        gs["_match"] = ""
+        jr["_match"] = ""
 
-    with tab1:
+        gs_tickets = set(gs.loc[gs["Ticket"].str.strip() != "", "Ticket"])
+        jr_tickets = set(jr.loc[jr["Ticket"].str.strip() != "", "Ticket"])
+        both_tickets = gs_tickets & jr_tickets
+
+        gs.loc[gs["Ticket"].isin(both_tickets), "_match"] = "Both"
+        gs.loc[(gs["Ticket"].str.strip() != "") & (~gs["Ticket"].isin(both_tickets)), "_match"] = "GSheet Only"
+        gs.loc[gs["Ticket"].str.strip() == "", "_match"] = "GSheet Only"
+
+        jr_only = jr[~jr["Ticket"].isin(gs_tickets)].copy()
+        jr_only["_match"] = "Jira Only"
+
+        merged = pd.concat([gs, jr_only], ignore_index=True)
+        return merged
+
+    if enable_jira and not jira_df.empty:
+        merged_df = build_merged_detail(df, jira_df)
+    else:
+        merged_df = df.copy()
+        merged_df["_match"] = "GSheet Only"
+
+    # ── Tabs ─────────────────────────────────────────────────────────────
+    tab_names = []
+    if enable_jira:
+        tab_names.append("🔗 From Jira")
+    tab_names.extend(["📈 评审需求汇总", "📅 PRD 评审汇总", "📋 需求明细"])
+
+    tabs = st.tabs(tab_names)
+    tab_idx = 0
+
+    if enable_jira:
+        with tabs[tab_idx]:
+            if jira_discover_mode:
+                st.subheader("🔍 Jira 字段发现")
+                st.caption("读取样本 issue 以发现可用字段名称和自定义字段 ID")
+                sample_key = st.text_input("Issue Key", value="SPCB-53026", key="jira_sample_key")
+                if st.button("读取字段", key="jira_discover_btn"):
+                    with st.spinner("正在读取…"):
+                        try:
+                            field_map = discover_jira_fields(sample_key)
+                            if field_map:
+                                st.success(f"发现 {len(field_map)} 个字段")
+                                search_kw = st.text_input("搜索字段名", "", key="field_search")
+                                display_fields = {
+                                    k: v for k, v in sorted(field_map.items())
+                                    if not search_kw or search_kw.lower() in k.lower() or search_kw.lower() in str(v).lower()
+                                }
+                                st.dataframe(
+                                    pd.DataFrame(
+                                        [(k, v) for k, v in display_fields.items()],
+                                        columns=["字段 ID", "示例值"],
+                                    ),
+                                    use_container_width=True,
+                                    height=600,
+                                )
+                            else:
+                                st.warning("未能解析字段信息")
+                        except Exception as e:
+                            st.error(f"读取失败: {e}")
+                st.markdown("---")
+
+            st.subheader("Jira 需求评审汇总")
+            st.caption(
+                f"数据来源: Jira ({', '.join(JIRA_PROJECTS)}) · "
+                f"Epic · Feature Project · POP Link 非空 · "
+                f"Highest/High + Medium/Low(Key Project) · "
+                f"历史月份: PRD Review End Date + PRD Link 非空 · "
+                f"本月及未来: Estimated PRD Sign Off Date"
+            )
+
+            if jira_df.empty:
+                st.info("暂无 Jira 数据。请确认 Jira Token 已配置（`skynet-base setup token`）且查询条件正确。")
+            else:
+                jira_filtered = jira_df.copy()
+                if sel_pms:
+                    jira_filtered = jira_filtered[jira_filtered["PM"].isin(sel_pms)]
+                if sel_months:
+                    jira_filtered = jira_filtered[jira_filtered["Review_Month"].isin(sel_months)]
+                if sel_statuses:
+                    jira_filtered = jira_filtered[jira_filtered["Status"].isin(sel_statuses)]
+                if sel_prod:
+                    jira_filtered = jira_filtered[jira_filtered["Product_Line"].isin(sel_prod)]
+
+                jira_with_month = jira_filtered[jira_filtered["Review_Month"] != ""].copy()
+
+                render_monthly_total_chart(jira_with_month)
+
+                st.markdown("---")
+
+                st.subheader("各 PM 每月评审需求数量（Jira）")
+                jira_pm_list = sel_pms if sel_pms else sorted(jira_filtered["PM"].unique().tolist())
+                render_pm_monthly_table(jira_with_month, jira_pm_list)
+
+        tab_idx += 1
+
+    with tabs[tab_idx]:
         st.subheader("每月评审需求总量")
         render_monthly_total_chart(df_with_month)
 
@@ -574,7 +996,7 @@ def main():
         selected_pm_list = sel_pms if sel_pms else sorted(df["PM"].unique().tolist())
         render_pm_monthly_table(df_with_month, selected_pm_list)
 
-    with tab2:
+    with tabs[tab_idx + 1]:
         st.subheader("每月 PRD 评审需求总量")
         st.caption("仅统计有 PRD Review End Date 的需求")
         render_monthly_total_chart(df_with_prd_month, month_col="PRD_Review_Month")
@@ -585,9 +1007,9 @@ def main():
         selected_pm_list = sel_pms if sel_pms else sorted(df["PM"].unique().tolist())
         render_pm_monthly_table(df_with_prd_month, selected_pm_list, month_col="PRD_Review_Month")
 
-    with tab3:
-        st.subheader("需求明细")
-        render_detail_table(df)
+    with tabs[tab_idx + 2]:
+        st.subheader("需求明细（合并）")
+        render_detail_table(merged_df, key_prefix="merged_dt")
 
 
 if __name__ == "__main__":
