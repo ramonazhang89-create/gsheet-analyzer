@@ -369,7 +369,7 @@ PM_GROUPS = {
         "junhao.wu", "xi.cen", "mingzhuo.he",
     ],
     "Others": [
-        "shunxiu.luo", "amber.xu", "xinyuan.yang", "feiyu.fan",
+        "shunxiu.luo", "amber.xu", "xinyuan.yang", "feiyu.fan", "miaofeng.gao",
     ],
 }
 
@@ -867,8 +867,8 @@ def main():
     st.sidebar.header("🔍 全局筛选")
 
     DEFAULT_PMS = [
-        "amber.xu", "jialun.lv", "jiamin.qi",
-        "kaiyang.chen", "mengchen.tang", "mingzhuo.he",
+        "amber.xu", "danqian.wang", "jialun.lv", "jiamin.qi",
+        "kaiyang.chen", "mengchen.tang", "miaofeng.gao", "mingzhuo.he",
         "pengbin.feng", "shunxiu.luo", "wenzhen.zang",
         "xi.cen", "xinlei.lv", "xinyuan.yang", "xun.li",
     ]
