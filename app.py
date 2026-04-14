@@ -359,7 +359,7 @@ def clean_pm_name(name: str) -> str:
 
 PM_GROUPS = {
     "CS Channel": [
-        "danqian.wang", "pengbin.feng", "mengchen.tang",
+        "danqian.wang", "miaofeng.gao", "pengbin.feng", "mengchen.tang",
         "jiamin.qi", "xun.li", "xinlei.lv",
     ],
     "Agent Console": [
@@ -369,7 +369,7 @@ PM_GROUPS = {
         "junhao.wu", "xi.cen", "mingzhuo.he",
     ],
     "Others": [
-        "shunxiu.luo", "amber.xu", "xinyuan.yang", "feiyu.fan", "miaofeng.gao",
+        "shunxiu.luo", "amber.xu", "xinyuan.yang", "feiyu.fan",
     ],
 }
 
