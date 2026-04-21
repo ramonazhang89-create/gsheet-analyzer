@@ -1,15 +1,512 @@
 {
-  "synced_at": "2026-04-14T14:24:10.648270",
+  "synced_at": "2026-04-21T14:58:34.901141",
   "jql": "project in (SPCB, SPCSP) AND issuetype = Epic AND \"Project Type\" = \"Feature Project\" AND \"POP Request Link\" is not EMPTY AND status not in (Closed, Icebox) AND created >= 2025-01-01 AND (priority in (Highest, High) OR (priority in (Medium, Low) AND \"Key Project\" is not EMPTY))",
-  "total": 854,
+  "total": 868,
   "issues": [
     {
       "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
-      "id": "10486007",
-      "self": "https://jira.shopee.io/rest/api/2/issue/10486007",
-      "key": "SPCSP-103958",
+      "id": "10526580",
+      "self": "https://jira.shopee.io/rest/api/2/issue/10526580",
+      "key": "SPCSP-104278",
       "fields": {
-        "summary": "SPX APIs for CCTV AI & Automation Project - Customer Service [Epic for MP CS Info Search & API integration]",
+        "summary": "Phase 2 - AI Supervision - Agent Assistant Adapt to Smart KB - 27 - Chat UI Revamp- Customer Service [Epic for MP CS Agent Console]",
+        "customfield_11546": null,
+        "customfield_36701": "2026-05-08",
+        "components": [
+          {
+            "self": "https://jira.shopee.io/rest/api/2/component/56307",
+            "id": "56307",
+            "name": "MP CS Agent Console"
+          }
+        ],
+        "customfield_10306": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=kaiyang.chen%40shopee.com",
+          "name": "kaiyang.chen@shopee.com",
+          "key": "JIRAUSER140723",
+          "emailAddress": "kaiyang.chen@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/bad6c27e332f74c71da4f21446c99d56?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/bad6c27e332f74c71da4f21446c99d56?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/bad6c27e332f74c71da4f21446c99d56?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/bad6c27e332f74c71da4f21446c99d56?d=mm&s=32"
+          },
+          "displayName": "Kaiyang Chen",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "customfield_15707": "https://confluence.shopee.io/x/FYLfv",
+        "assignee": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=jiawei.wu%40shopee.com",
+          "name": "jiawei.wu@shopee.com",
+          "key": "JIRAUSER82732",
+          "emailAddress": "jiawei.wu@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://jira.shopee.io/secure/useravatar?ownerId=JIRAUSER82732&avatarId=51908",
+            "24x24": "https://jira.shopee.io/secure/useravatar?size=small&ownerId=JIRAUSER82732&avatarId=51908",
+            "16x16": "https://jira.shopee.io/secure/useravatar?size=xsmall&ownerId=JIRAUSER82732&avatarId=51908",
+            "32x32": "https://jira.shopee.io/secure/useravatar?size=medium&ownerId=JIRAUSER82732&avatarId=51908"
+          },
+          "displayName": "Jiawei Wu",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "priority": {
+          "self": "https://jira.shopee.io/rest/api/2/priority/2",
+          "iconUrl": "https://jira.shopee.io/images/icons/priorities/high.svg",
+          "name": "High",
+          "id": "2"
+        },
+        "customfield_12411": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/79705",
+          "value": "Feature Project",
+          "id": "79705",
+          "disabled": false
+        },
+        "customfield_35604": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/73600",
+          "value": "Customer Service",
+          "id": "73600",
+          "disabled": false
+        },
+        "status": {
+          "self": "https://jira.shopee.io/rest/api/2/status/1",
+          "description": "TPM Review if the requirement needs to be supported.",
+          "iconUrl": "https://jira.shopee.io/images/icons/statuses/open.png",
+          "name": "Waiting",
+          "id": "1",
+          "statusCategory": {
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/2",
+            "id": 2,
+            "key": "new",
+            "colorName": "blue-gray",
+            "name": "To Do"
+          }
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "10525859",
+      "self": "https://jira.shopee.io/rest/api/2/issue/10525859",
+      "key": "SPCSP-104265",
+      "fields": {
+        "summary": "Phase 2 - AI Supervision - Agent Assistant Adapt to Smart KB - 26 - AA 性能bug - Customer Service [Epic for MP CS Agent Console]",
+        "customfield_11546": null,
+        "customfield_36701": null,
+        "components": [
+          {
+            "self": "https://jira.shopee.io/rest/api/2/component/56307",
+            "id": "56307",
+            "name": "MP CS Agent Console"
+          }
+        ],
+        "customfield_10306": null,
+        "customfield_15707": null,
+        "assignee": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=jiawei.wu%40shopee.com",
+          "name": "jiawei.wu@shopee.com",
+          "key": "JIRAUSER82732",
+          "emailAddress": "jiawei.wu@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://jira.shopee.io/secure/useravatar?ownerId=JIRAUSER82732&avatarId=51908",
+            "24x24": "https://jira.shopee.io/secure/useravatar?size=small&ownerId=JIRAUSER82732&avatarId=51908",
+            "16x16": "https://jira.shopee.io/secure/useravatar?size=xsmall&ownerId=JIRAUSER82732&avatarId=51908",
+            "32x32": "https://jira.shopee.io/secure/useravatar?size=medium&ownerId=JIRAUSER82732&avatarId=51908"
+          },
+          "displayName": "Jiawei Wu",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "priority": {
+          "self": "https://jira.shopee.io/rest/api/2/priority/2",
+          "iconUrl": "https://jira.shopee.io/images/icons/priorities/high.svg",
+          "name": "High",
+          "id": "2"
+        },
+        "customfield_12411": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/79705",
+          "value": "Feature Project",
+          "id": "79705",
+          "disabled": false
+        },
+        "customfield_35604": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/73600",
+          "value": "Customer Service",
+          "id": "73600",
+          "disabled": false
+        },
+        "status": {
+          "self": "https://jira.shopee.io/rest/api/2/status/1",
+          "description": "TPM Review if the requirement needs to be supported.",
+          "iconUrl": "https://jira.shopee.io/images/icons/statuses/open.png",
+          "name": "Waiting",
+          "id": "1",
+          "statusCategory": {
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/2",
+            "id": 2,
+            "key": "new",
+            "colorName": "blue-gray",
+            "name": "To Do"
+          }
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "10510818",
+      "self": "https://jira.shopee.io/rest/api/2/issue/10510818",
+      "key": "SPCSP-104148",
+      "fields": {
+        "summary": "Supports setting chat timeout duration based on market.",
+        "customfield_11546": null,
+        "customfield_36701": "2026-04-22",
+        "components": [
+          {
+            "self": "https://jira.shopee.io/rest/api/2/component/56307",
+            "id": "56307",
+            "name": "MP CS Agent Console"
+          }
+        ],
+        "customfield_10306": null,
+        "customfield_15707": null,
+        "assignee": null,
+        "priority": {
+          "self": "https://jira.shopee.io/rest/api/2/priority/2",
+          "iconUrl": "https://jira.shopee.io/images/icons/priorities/high.svg",
+          "name": "High",
+          "id": "2"
+        },
+        "customfield_12411": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/79705",
+          "value": "Feature Project",
+          "id": "79705",
+          "disabled": false
+        },
+        "customfield_35604": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/73600",
+          "value": "Customer Service",
+          "id": "73600",
+          "disabled": false
+        },
+        "status": {
+          "self": "https://jira.shopee.io/rest/api/2/status/10701",
+          "description": "",
+          "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
+          "name": "PRD",
+          "id": "10701",
+          "statusCategory": {
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
+            "id": 4,
+            "key": "indeterminate",
+            "colorName": "yellow",
+            "name": "In Progress"
+          }
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "10509675",
+      "self": "https://jira.shopee.io/rest/api/2/issue/10509675",
+      "key": "SPCSP-104142",
+      "fields": {
+        "summary": "DMS Feature Enhancement: Seller Compensation Flow for Return Refund (Warehouse-fulfilled orders) - Return Refund [Epic for MP DMS]",
+        "customfield_11546": null,
+        "customfield_36701": null,
+        "components": [
+          {
+            "self": "https://jira.shopee.io/rest/api/2/component/37501",
+            "id": "37501",
+            "name": "MP DMS"
+          }
+        ],
+        "customfield_10306": null,
+        "customfield_15707": null,
+        "assignee": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=cecilia.linya%40shopee.com",
+          "name": "cecilia.linya@shopee.com",
+          "key": "JIRAUSER37804",
+          "emailAddress": "cecilia.linya@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/cc1c5e3814027071eed25e8a864c7d77?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/cc1c5e3814027071eed25e8a864c7d77?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/cc1c5e3814027071eed25e8a864c7d77?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/cc1c5e3814027071eed25e8a864c7d77?d=mm&s=32"
+          },
+          "displayName": "Cecilia Lin ",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "priority": {
+          "self": "https://jira.shopee.io/rest/api/2/priority/2",
+          "iconUrl": "https://jira.shopee.io/images/icons/priorities/high.svg",
+          "name": "High",
+          "id": "2"
+        },
+        "customfield_12411": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/79705",
+          "value": "Feature Project",
+          "id": "79705",
+          "disabled": false
+        },
+        "customfield_35604": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/64102",
+          "value": "Return Refund",
+          "id": "64102",
+          "disabled": false
+        },
+        "status": {
+          "self": "https://jira.shopee.io/rest/api/2/status/1",
+          "description": "TPM Review if the requirement needs to be supported.",
+          "iconUrl": "https://jira.shopee.io/images/icons/statuses/open.png",
+          "name": "Waiting",
+          "id": "1",
+          "statusCategory": {
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/2",
+            "id": 2,
+            "key": "new",
+            "colorName": "blue-gray",
+            "name": "To Do"
+          }
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "10509155",
+      "self": "https://jira.shopee.io/rest/api/2/issue/10509155",
+      "key": "SPCSP-104140",
+      "fields": {
+        "summary": "Phase 2 - AI Supervision - Agent Assistant Adapt to Smart KB - 25 - Allow Update to AA only when only one issue - Customer Service [Epic for MP CS Agent Console]",
+        "customfield_11546": null,
+        "customfield_36701": "2026-04-24",
+        "components": [
+          {
+            "self": "https://jira.shopee.io/rest/api/2/component/56307",
+            "id": "56307",
+            "name": "MP CS Agent Console"
+          }
+        ],
+        "customfield_10306": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=kaiyang.chen%40shopee.com",
+          "name": "kaiyang.chen@shopee.com",
+          "key": "JIRAUSER140723",
+          "emailAddress": "kaiyang.chen@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/bad6c27e332f74c71da4f21446c99d56?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/bad6c27e332f74c71da4f21446c99d56?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/bad6c27e332f74c71da4f21446c99d56?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/bad6c27e332f74c71da4f21446c99d56?d=mm&s=32"
+          },
+          "displayName": "Kaiyang Chen",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "customfield_15707": "https://confluence.shopee.io/x/SGiYv",
+        "assignee": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=jiawei.wu%40shopee.com",
+          "name": "jiawei.wu@shopee.com",
+          "key": "JIRAUSER82732",
+          "emailAddress": "jiawei.wu@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://jira.shopee.io/secure/useravatar?ownerId=JIRAUSER82732&avatarId=51908",
+            "24x24": "https://jira.shopee.io/secure/useravatar?size=small&ownerId=JIRAUSER82732&avatarId=51908",
+            "16x16": "https://jira.shopee.io/secure/useravatar?size=xsmall&ownerId=JIRAUSER82732&avatarId=51908",
+            "32x32": "https://jira.shopee.io/secure/useravatar?size=medium&ownerId=JIRAUSER82732&avatarId=51908"
+          },
+          "displayName": "Jiawei Wu",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "priority": {
+          "self": "https://jira.shopee.io/rest/api/2/priority/2",
+          "iconUrl": "https://jira.shopee.io/images/icons/priorities/high.svg",
+          "name": "High",
+          "id": "2"
+        },
+        "customfield_12411": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/79705",
+          "value": "Feature Project",
+          "id": "79705",
+          "disabled": false
+        },
+        "customfield_35604": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/73600",
+          "value": "Customer Service",
+          "id": "73600",
+          "disabled": false
+        },
+        "status": {
+          "self": "https://jira.shopee.io/rest/api/2/status/1",
+          "description": "TPM Review if the requirement needs to be supported.",
+          "iconUrl": "https://jira.shopee.io/images/icons/statuses/open.png",
+          "name": "Waiting",
+          "id": "1",
+          "statusCategory": {
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/2",
+            "id": 2,
+            "key": "new",
+            "colorName": "blue-gray",
+            "name": "To Do"
+          }
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "10493651",
+      "self": "https://jira.shopee.io/rest/api/2/issue/10493651",
+      "key": "SPCSP-104043",
+      "fields": {
+        "summary": "AA Phase 2 - Optimize the loading logic&experience of the AA Issue Summary - 24 - Customer Service [Epic for MP CS Agent Console]",
+        "customfield_11546": null,
+        "customfield_36701": "2026-04-24",
+        "components": [
+          {
+            "self": "https://jira.shopee.io/rest/api/2/component/56307",
+            "id": "56307",
+            "name": "MP CS Agent Console"
+          }
+        ],
+        "customfield_10306": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=jialun.lv%40shopee.com",
+          "name": "jialun.lv@shopee.com",
+          "key": "JIRAUSER159915",
+          "emailAddress": "jialun.lv@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/1377f4443c8b416d0aa1c0677f42a2e0?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/1377f4443c8b416d0aa1c0677f42a2e0?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/1377f4443c8b416d0aa1c0677f42a2e0?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/1377f4443c8b416d0aa1c0677f42a2e0?d=mm&s=32"
+          },
+          "displayName": "Jialun Lv",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "customfield_15707": null,
+        "assignee": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=jialun.lv%40shopee.com",
+          "name": "jialun.lv@shopee.com",
+          "key": "JIRAUSER159915",
+          "emailAddress": "jialun.lv@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/1377f4443c8b416d0aa1c0677f42a2e0?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/1377f4443c8b416d0aa1c0677f42a2e0?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/1377f4443c8b416d0aa1c0677f42a2e0?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/1377f4443c8b416d0aa1c0677f42a2e0?d=mm&s=32"
+          },
+          "displayName": "Jialun Lv",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "priority": {
+          "self": "https://jira.shopee.io/rest/api/2/priority/2",
+          "iconUrl": "https://jira.shopee.io/images/icons/priorities/high.svg",
+          "name": "High",
+          "id": "2"
+        },
+        "customfield_12411": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/79705",
+          "value": "Feature Project",
+          "id": "79705",
+          "disabled": false
+        },
+        "customfield_35604": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/73600",
+          "value": "Customer Service",
+          "id": "73600",
+          "disabled": false
+        },
+        "status": {
+          "self": "https://jira.shopee.io/rest/api/2/status/10701",
+          "description": "",
+          "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
+          "name": "PRD",
+          "id": "10701",
+          "statusCategory": {
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
+            "id": 4,
+            "key": "indeterminate",
+            "colorName": "yellow",
+            "name": "In Progress"
+          }
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "10493197",
+      "self": "https://jira.shopee.io/rest/api/2/issue/10493197",
+      "key": "SPCSP-104036",
+      "fields": {
+        "summary": "RMS Feature Enhancement  - Return Refund [Epic for MP DMS]",
+        "customfield_11546": null,
+        "customfield_36701": "2026-04-24",
+        "components": [
+          {
+            "self": "https://jira.shopee.io/rest/api/2/component/37501",
+            "id": "37501",
+            "name": "MP DMS"
+          }
+        ],
+        "customfield_10306": null,
+        "customfield_15707": null,
+        "assignee": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=ariel.tanyx%40shopee.com",
+          "name": "ariel.tanyx@shopee.com",
+          "key": "JIRAUSER133448",
+          "emailAddress": "ariel.tanyx@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://jira.shopee.io/secure/useravatar?avatarId=10341",
+            "24x24": "https://jira.shopee.io/secure/useravatar?size=small&avatarId=10341",
+            "16x16": "https://jira.shopee.io/secure/useravatar?size=xsmall&avatarId=10341",
+            "32x32": "https://jira.shopee.io/secure/useravatar?size=medium&avatarId=10341"
+          },
+          "displayName": "Tan Yu Xuan Ariel",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "priority": {
+          "self": "https://jira.shopee.io/rest/api/2/priority/2",
+          "iconUrl": "https://jira.shopee.io/images/icons/priorities/high.svg",
+          "name": "High",
+          "id": "2"
+        },
+        "customfield_12411": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/79705",
+          "value": "Feature Project",
+          "id": "79705",
+          "disabled": false
+        },
+        "customfield_35604": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/84708",
+          "value": "Supply Chain - WMS (General)",
+          "id": "84708",
+          "disabled": false
+        },
+        "status": {
+          "self": "https://jira.shopee.io/rest/api/2/status/10701",
+          "description": "",
+          "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
+          "name": "PRD",
+          "id": "10701",
+          "statusCategory": {
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
+            "id": 4,
+            "key": "indeterminate",
+            "colorName": "yellow",
+            "name": "In Progress"
+          }
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "10489076",
+      "self": "https://jira.shopee.io/rest/api/2/issue/10489076",
+      "key": "SPCSP-104015",
+      "fields": {
+        "summary": "SPX API for CS SOPA & Chatbot - Customer Service [Epic for MP CS Info Search & API integration]",
         "customfield_11546": null,
         "customfield_36701": null,
         "components": [
@@ -66,6 +563,168 @@
           "self": "https://jira.shopee.io/rest/api/2/customFieldOption/86706",
           "value": "Supply Chain - SPX Service Point/Locker (General)",
           "id": "86706",
+          "disabled": false
+        },
+        "status": {
+          "self": "https://jira.shopee.io/rest/api/2/status/1",
+          "description": "TPM Review if the requirement needs to be supported.",
+          "iconUrl": "https://jira.shopee.io/images/icons/statuses/open.png",
+          "name": "Waiting",
+          "id": "1",
+          "statusCategory": {
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/2",
+            "id": 2,
+            "key": "new",
+            "colorName": "blue-gray",
+            "name": "To Do"
+          }
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "10486007",
+      "self": "https://jira.shopee.io/rest/api/2/issue/10486007",
+      "key": "SPCSP-103958",
+      "fields": {
+        "summary": "SPX APIs for CCTV AI & Automation Project - Customer Service [Epic for MP CS Info Search & API integration]",
+        "customfield_11546": null,
+        "customfield_36701": "2026-05-15",
+        "components": [
+          {
+            "self": "https://jira.shopee.io/rest/api/2/component/14903",
+            "id": "14903",
+            "name": "MP CS Info Search & API integration"
+          }
+        ],
+        "customfield_10306": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=caixia.tu%40shopee.com",
+          "name": "caixia.tu@shopee.com",
+          "key": "caixia.tu@shopee.com",
+          "emailAddress": "caixia.tu@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/877f3d85321f87e5c31a7058f81ff060?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/877f3d85321f87e5c31a7058f81ff060?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/877f3d85321f87e5c31a7058f81ff060?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/877f3d85321f87e5c31a7058f81ff060?d=mm&s=32"
+          },
+          "displayName": "Caixia Tu",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "customfield_15707": null,
+        "assignee": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=caixia.tu%40shopee.com",
+          "name": "caixia.tu@shopee.com",
+          "key": "caixia.tu@shopee.com",
+          "emailAddress": "caixia.tu@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/877f3d85321f87e5c31a7058f81ff060?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/877f3d85321f87e5c31a7058f81ff060?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/877f3d85321f87e5c31a7058f81ff060?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/877f3d85321f87e5c31a7058f81ff060?d=mm&s=32"
+          },
+          "displayName": "Caixia Tu",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "priority": {
+          "self": "https://jira.shopee.io/rest/api/2/priority/2",
+          "iconUrl": "https://jira.shopee.io/images/icons/priorities/high.svg",
+          "name": "High",
+          "id": "2"
+        },
+        "customfield_12411": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/79705",
+          "value": "Feature Project",
+          "id": "79705",
+          "disabled": false
+        },
+        "customfield_35604": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/86706",
+          "value": "Supply Chain - SPX Service Point/Locker (General)",
+          "id": "86706",
+          "disabled": false
+        },
+        "status": {
+          "self": "https://jira.shopee.io/rest/api/2/status/1",
+          "description": "TPM Review if the requirement needs to be supported.",
+          "iconUrl": "https://jira.shopee.io/images/icons/statuses/open.png",
+          "name": "Waiting",
+          "id": "1",
+          "statusCategory": {
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/2",
+            "id": 2,
+            "key": "new",
+            "colorName": "blue-gray",
+            "name": "To Do"
+          }
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "10483147",
+      "self": "https://jira.shopee.io/rest/api/2/issue/10483147",
+      "key": "SPCSP-103918",
+      "fields": {
+        "summary": "Auto QA Phase 3 Feature Enhancements: QA Summary and Ineligible Cases Filtering - Customer Service [Epic for MP CS Platform]",
+        "customfield_11546": null,
+        "customfield_36701": "2026-04-29",
+        "components": [
+          {
+            "self": "https://jira.shopee.io/rest/api/2/component/56706",
+            "id": "56706",
+            "name": "MP CS Platform"
+          }
+        ],
+        "customfield_10306": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=shunxiu.luo%40shopee.com",
+          "name": "shunxiu.luo@shopee.com",
+          "key": "JIRAUSER57805",
+          "emailAddress": "shunxiu.luo@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/65bb2efefe4abd110f480fdb54f9caff?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/65bb2efefe4abd110f480fdb54f9caff?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/65bb2efefe4abd110f480fdb54f9caff?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/65bb2efefe4abd110f480fdb54f9caff?d=mm&s=32"
+          },
+          "displayName": "shunxiu.luo@shopee.com",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "customfield_15707": null,
+        "assignee": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=junhao.wu%40shopee.com",
+          "name": "junhao.wu@shopee.com",
+          "key": "JIRAUSER56257",
+          "emailAddress": "junhao.wu@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/f2a84540f9fc92406b68496ba4135206?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/f2a84540f9fc92406b68496ba4135206?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/f2a84540f9fc92406b68496ba4135206?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/f2a84540f9fc92406b68496ba4135206?d=mm&s=32"
+          },
+          "displayName": "junhao.wu@shopee.com",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "priority": {
+          "self": "https://jira.shopee.io/rest/api/2/priority/2",
+          "iconUrl": "https://jira.shopee.io/images/icons/priorities/high.svg",
+          "name": "High",
+          "id": "2"
+        },
+        "customfield_12411": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/79705",
+          "value": "Feature Project",
+          "id": "79705",
+          "disabled": false
+        },
+        "customfield_35604": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/73600",
+          "value": "Customer Service",
+          "id": "73600",
           "disabled": false
         },
         "status": {
@@ -496,8 +1155,8 @@
       "key": "SPCSP-103710",
       "fields": {
         "summary": "Place Internet Call behind Chatbot - Customer Service [Epic for MP CS Channel]",
-        "customfield_11546": null,
-        "customfield_36701": null,
+        "customfield_11546": "2026-04-14",
+        "customfield_36701": "2026-04-14",
         "components": [
           {
             "self": "https://jira.shopee.io/rest/api/2/component/56306",
@@ -520,7 +1179,7 @@
           "active": true,
           "timeZone": "Asia/Singapore"
         },
-        "customfield_15707": null,
+        "customfield_15707": "https://confluence.shopee.io/display/SCPM/%5BPRD%5D+Live+Agent+Control+-+Place+Internet+Call+Behind+Chatbot+-+Internet+Call+Adjustment",
         "assignee": {
           "self": "https://jira.shopee.io/rest/api/2/user?username=danqian.wang%40shopee.com",
           "name": "danqian.wang@shopee.com",
@@ -555,17 +1214,17 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/1",
-          "description": "TPM Review if the requirement needs to be supported.",
-          "iconUrl": "https://jira.shopee.io/images/icons/statuses/open.png",
-          "name": "Waiting",
-          "id": "1",
+          "self": "https://jira.shopee.io/rest/api/2/status/11402",
+          "description": "",
+          "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
+          "name": "TECH DESIGN",
+          "id": "11402",
           "statusCategory": {
-            "self": "https://jira.shopee.io/rest/api/2/statuscategory/2",
-            "id": 2,
-            "key": "new",
-            "colorName": "blue-gray",
-            "name": "To Do"
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
+            "id": 4,
+            "key": "indeterminate",
+            "colorName": "yellow",
+            "name": "In Progress"
           }
         }
       }
@@ -765,17 +1424,17 @@
         },
         "customfield_15707": null,
         "assignee": {
-          "self": "https://jira.shopee.io/rest/api/2/user?username=guanlin.ma%40shopee.com",
-          "name": "guanlin.ma@shopee.com",
-          "key": "JIRAUSER169690",
-          "emailAddress": "guanlin.ma@shopee.com",
+          "self": "https://jira.shopee.io/rest/api/2/user?username=qimiao%40shopee.com",
+          "name": "qimiao@shopee.com",
+          "key": "JIRAUSER172935",
+          "emailAddress": "qimiao@shopee.com",
           "avatarUrls": {
-            "48x48": "https://www.gravatar.com/avatar/3c970ad315cc47674d0273b4546a7712?d=mm&s=48",
-            "24x24": "https://www.gravatar.com/avatar/3c970ad315cc47674d0273b4546a7712?d=mm&s=24",
-            "16x16": "https://www.gravatar.com/avatar/3c970ad315cc47674d0273b4546a7712?d=mm&s=16",
-            "32x32": "https://www.gravatar.com/avatar/3c970ad315cc47674d0273b4546a7712?d=mm&s=32"
+            "48x48": "https://www.gravatar.com/avatar/f399b985f08562d6b0ed442c302fb575?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/f399b985f08562d6b0ed442c302fb575?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/f399b985f08562d6b0ed442c302fb575?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/f399b985f08562d6b0ed442c302fb575?d=mm&s=32"
           },
-          "displayName": "Guanlin Ma",
+          "displayName": "Miao Qi",
           "active": true,
           "timeZone": "Asia/Singapore"
         },
@@ -821,7 +1480,7 @@
       "fields": {
         "summary": "Add short code in DMS/CS Infosearch/Order admin [Seperate from SPCPM-112975] - Return Refund [Epic for MP DMS]",
         "customfield_11546": null,
-        "customfield_36701": "2026-04-20",
+        "customfield_36701": "2026-05-08",
         "components": [
           {
             "self": "https://jira.shopee.io/rest/api/2/component/37501",
@@ -829,20 +1488,34 @@
             "name": "MP DMS"
           }
         ],
-        "customfield_10306": null,
+        "customfield_10306": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=minjing.fang%40shopee.com",
+          "name": "minjing.fang@shopee.com",
+          "key": "JIRAUSER146312",
+          "emailAddress": "minjing.fang@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/3c1cff2b77f9418862cd0098463bcacf?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/3c1cff2b77f9418862cd0098463bcacf?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/3c1cff2b77f9418862cd0098463bcacf?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/3c1cff2b77f9418862cd0098463bcacf?d=mm&s=32"
+          },
+          "displayName": "Minjing Fang",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
         "customfield_15707": null,
         "assignee": {
-          "self": "https://jira.shopee.io/rest/api/2/user?username=yuanjie.long%40shopee.com",
-          "name": "yuanjie.long@shopee.com",
-          "key": "JIRAUSER22383",
-          "emailAddress": "yuanjie.long@shopee.com",
+          "self": "https://jira.shopee.io/rest/api/2/user?username=ariel.tanyx%40shopee.com",
+          "name": "ariel.tanyx@shopee.com",
+          "key": "JIRAUSER133448",
+          "emailAddress": "ariel.tanyx@shopee.com",
           "avatarUrls": {
-            "48x48": "https://www.gravatar.com/avatar/809389793417358d540cffd0dd102c3d?d=mm&s=48",
-            "24x24": "https://www.gravatar.com/avatar/809389793417358d540cffd0dd102c3d?d=mm&s=24",
-            "16x16": "https://www.gravatar.com/avatar/809389793417358d540cffd0dd102c3d?d=mm&s=16",
-            "32x32": "https://www.gravatar.com/avatar/809389793417358d540cffd0dd102c3d?d=mm&s=32"
+            "48x48": "https://jira.shopee.io/secure/useravatar?avatarId=10341",
+            "24x24": "https://jira.shopee.io/secure/useravatar?size=small&avatarId=10341",
+            "16x16": "https://jira.shopee.io/secure/useravatar?size=xsmall&avatarId=10341",
+            "32x32": "https://jira.shopee.io/secure/useravatar?size=medium&avatarId=10341"
           },
-          "displayName": "yuanjie.long@shopee.com",
+          "displayName": "Tan Yu Xuan Ariel",
           "active": true,
           "timeZone": "Asia/Singapore"
         },
@@ -888,7 +1561,7 @@
       "fields": {
         "summary": "AA Phase 2 - AA Support DP Order - 22 - Customer Service [Epic for MP CS Agent Console]",
         "customfield_11546": null,
-        "customfield_36701": "2026-04-22",
+        "customfield_36701": "2026-04-29",
         "components": [
           {
             "self": "https://jira.shopee.io/rest/api/2/component/56307",
@@ -1036,88 +1709,7 @@
       "fields": {
         "summary": "Phase 2 - AI Supervision - Agent Assistant Adapt to Smart KB - 20 - Suggested Reply Loading支持流式输出- Customer Service [Epic for MP CS Agent Console]",
         "customfield_11546": null,
-        "customfield_36701": "2026-04-30",
-        "components": [
-          {
-            "self": "https://jira.shopee.io/rest/api/2/component/56307",
-            "id": "56307",
-            "name": "MP CS Agent Console"
-          }
-        ],
-        "customfield_10306": {
-          "self": "https://jira.shopee.io/rest/api/2/user?username=kaiyang.chen%40shopee.com",
-          "name": "kaiyang.chen@shopee.com",
-          "key": "JIRAUSER140723",
-          "emailAddress": "kaiyang.chen@shopee.com",
-          "avatarUrls": {
-            "48x48": "https://www.gravatar.com/avatar/bad6c27e332f74c71da4f21446c99d56?d=mm&s=48",
-            "24x24": "https://www.gravatar.com/avatar/bad6c27e332f74c71da4f21446c99d56?d=mm&s=24",
-            "16x16": "https://www.gravatar.com/avatar/bad6c27e332f74c71da4f21446c99d56?d=mm&s=16",
-            "32x32": "https://www.gravatar.com/avatar/bad6c27e332f74c71da4f21446c99d56?d=mm&s=32"
-          },
-          "displayName": "Kaiyang Chen",
-          "active": true,
-          "timeZone": "Asia/Singapore"
-        },
-        "customfield_15707": null,
-        "assignee": {
-          "self": "https://jira.shopee.io/rest/api/2/user?username=jiawei.wu%40shopee.com",
-          "name": "jiawei.wu@shopee.com",
-          "key": "JIRAUSER82732",
-          "emailAddress": "jiawei.wu@shopee.com",
-          "avatarUrls": {
-            "48x48": "https://jira.shopee.io/secure/useravatar?ownerId=JIRAUSER82732&avatarId=51908",
-            "24x24": "https://jira.shopee.io/secure/useravatar?size=small&ownerId=JIRAUSER82732&avatarId=51908",
-            "16x16": "https://jira.shopee.io/secure/useravatar?size=xsmall&ownerId=JIRAUSER82732&avatarId=51908",
-            "32x32": "https://jira.shopee.io/secure/useravatar?size=medium&ownerId=JIRAUSER82732&avatarId=51908"
-          },
-          "displayName": "Jiawei Wu",
-          "active": true,
-          "timeZone": "Asia/Singapore"
-        },
-        "priority": {
-          "self": "https://jira.shopee.io/rest/api/2/priority/2",
-          "iconUrl": "https://jira.shopee.io/images/icons/priorities/high.svg",
-          "name": "High",
-          "id": "2"
-        },
-        "customfield_12411": {
-          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/79705",
-          "value": "Feature Project",
-          "id": "79705",
-          "disabled": false
-        },
-        "customfield_35604": {
-          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/73600",
-          "value": "Customer Service",
-          "id": "73600",
-          "disabled": false
-        },
-        "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/1",
-          "description": "TPM Review if the requirement needs to be supported.",
-          "iconUrl": "https://jira.shopee.io/images/icons/statuses/open.png",
-          "name": "Waiting",
-          "id": "1",
-          "statusCategory": {
-            "self": "https://jira.shopee.io/rest/api/2/statuscategory/2",
-            "id": 2,
-            "key": "new",
-            "colorName": "blue-gray",
-            "name": "To Do"
-          }
-        }
-      }
-    },
-    {
-      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
-      "id": "10449017",
-      "self": "https://jira.shopee.io/rest/api/2/issue/10449017",
-      "key": "SPCSP-103470",
-      "fields": {
-        "summary": "Phase 2 - AI Supervision - Agent Assistant Adapt to Smart KB - 19 - Constrain model not output \"Choki\" - Customer Service [Epic for MP CS Agent Console]",
-        "customfield_11546": null,
-        "customfield_36701": "2026-04-17",
+        "customfield_36701": "2026-05-08",
         "components": [
           {
             "self": "https://jira.shopee.io/rest/api/2/component/56307",
@@ -1383,19 +1975,19 @@
           "active": true,
           "timeZone": "Asia/Singapore"
         },
-        "customfield_15707": null,
+        "customfield_15707": "https://confluence.shopee.io/display/SCPM/Automated+BCRS+Deposit+Calculation+for+SG+Listings+Compliance",
         "assignee": {
-          "self": "https://jira.shopee.io/rest/api/2/user?username=guanlin.ma%40shopee.com",
-          "name": "guanlin.ma@shopee.com",
-          "key": "JIRAUSER169690",
-          "emailAddress": "guanlin.ma@shopee.com",
+          "self": "https://jira.shopee.io/rest/api/2/user?username=qimiao%40shopee.com",
+          "name": "qimiao@shopee.com",
+          "key": "JIRAUSER172935",
+          "emailAddress": "qimiao@shopee.com",
           "avatarUrls": {
-            "48x48": "https://www.gravatar.com/avatar/3c970ad315cc47674d0273b4546a7712?d=mm&s=48",
-            "24x24": "https://www.gravatar.com/avatar/3c970ad315cc47674d0273b4546a7712?d=mm&s=24",
-            "16x16": "https://www.gravatar.com/avatar/3c970ad315cc47674d0273b4546a7712?d=mm&s=16",
-            "32x32": "https://www.gravatar.com/avatar/3c970ad315cc47674d0273b4546a7712?d=mm&s=32"
+            "48x48": "https://www.gravatar.com/avatar/f399b985f08562d6b0ed442c302fb575?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/f399b985f08562d6b0ed442c302fb575?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/f399b985f08562d6b0ed442c302fb575?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/f399b985f08562d6b0ed442c302fb575?d=mm&s=32"
           },
-          "displayName": "Guanlin Ma",
+          "displayName": "Miao Qi",
           "active": true,
           "timeZone": "Asia/Singapore"
         },
@@ -1494,11 +2086,11 @@
         },
         "customfield_35604": null,
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/11402",
-          "description": "",
+          "self": "https://jira.shopee.io/rest/api/2/status/10303",
+          "description": "Common Biz FE Component Update according to the new standard",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "TECH DESIGN",
-          "id": "11402",
+          "name": "Developing",
+          "id": "10303",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -1575,11 +2167,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/11402",
-          "description": "",
+          "self": "https://jira.shopee.io/rest/api/2/status/10303",
+          "description": "Common Biz FE Component Update according to the new standard",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "TECH DESIGN",
-          "id": "11402",
+          "name": "Developing",
+          "id": "10303",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -1746,7 +2338,7 @@
       "fields": {
         "summary": "Reintegrate Help Center to ODP, RR, and Shipping Pages and Deploy Buyer AA Across Chatbot Entry Points - Customer Service [Epic for MP CS Channel]",
         "customfield_11546": "2026-03-31",
-        "customfield_36701": "2026-03-31",
+        "customfield_36701": "2026-04-08",
         "components": [
           {
             "self": "https://jira.shopee.io/rest/api/2/component/56306",
@@ -1804,11 +2396,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/10003",
-          "description": "This issue is under testing by QA in testing environment",
+          "self": "https://jira.shopee.io/rest/api/2/status/10601",
+          "description": "",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "Testing",
-          "id": "10003",
+          "name": "UAT",
+          "id": "10601",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -1827,7 +2419,7 @@
       "fields": {
         "summary": "AME - Dropship Solution for Myanmar Expansion - Customer Service [Epic for MP CS Agent Console]",
         "customfield_11546": null,
-        "customfield_36701": "2026-04-15",
+        "customfield_36701": "2026-04-27",
         "components": [
           {
             "self": "https://jira.shopee.io/rest/api/2/component/56307",
@@ -1885,17 +2477,17 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/1",
-          "description": "TPM Review if the requirement needs to be supported.",
-          "iconUrl": "https://jira.shopee.io/images/icons/statuses/open.png",
-          "name": "Waiting",
-          "id": "1",
+          "self": "https://jira.shopee.io/rest/api/2/status/10701",
+          "description": "",
+          "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
+          "name": "PRD",
+          "id": "10701",
           "statusCategory": {
-            "self": "https://jira.shopee.io/rest/api/2/statuscategory/2",
-            "id": 2,
-            "key": "new",
-            "colorName": "blue-gray",
-            "name": "To Do"
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
+            "id": 4,
+            "key": "indeterminate",
+            "colorName": "yellow",
+            "name": "In Progress"
           }
         }
       }
@@ -1908,7 +2500,7 @@
       "fields": {
         "summary": "AME - Dropship Solution for Myanmar Expansion - Customer Service [Epic for MP CS Platform]",
         "customfield_11546": null,
-        "customfield_36701": "2026-04-15",
+        "customfield_36701": "2026-05-13",
         "components": [
           {
             "self": "https://jira.shopee.io/rest/api/2/component/56706",
@@ -2209,11 +2801,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/11402",
+          "self": "https://jira.shopee.io/rest/api/2/status/10601",
           "description": "",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "TECH DESIGN",
-          "id": "11402",
+          "name": "UAT",
+          "id": "10601",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -2393,7 +2985,7 @@
       "key": "SPCSP-102688",
       "fields": {
         "summary": "Automate Seller Chatbot Flows via Logistics/Payment API Integration - Customer Service [Epic for MP CS Info Search & API integration]",
-        "customfield_11546": null,
+        "customfield_11546": "2026-04-17",
         "customfield_36701": "2026-04-16",
         "components": [
           {
@@ -2452,11 +3044,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/10701",
+          "self": "https://jira.shopee.io/rest/api/2/status/11402",
           "description": "",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "PRD",
-          "id": "10701",
+          "name": "TECH DESIGN",
+          "id": "11402",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -2533,11 +3125,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/11402",
-          "description": "",
+          "self": "https://jira.shopee.io/rest/api/2/status/10303",
+          "description": "Common Biz FE Component Update according to the new standard",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "TECH DESIGN",
-          "id": "11402",
+          "name": "Developing",
+          "id": "10303",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -2556,7 +3148,7 @@
       "fields": {
         "summary": "Phase 2 - AI Supervision - Agent Assistant Adapt to Smart KB - 16 - Direct raise RR - Customer Service [Epic for MP CS Agent Console]",
         "customfield_11546": null,
-        "customfield_36701": "2026-04-24",
+        "customfield_36701": "2026-05-29",
         "components": [
           {
             "self": "https://jira.shopee.io/rest/api/2/component/56307",
@@ -2695,11 +3287,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/11402",
-          "description": "",
+          "self": "https://jira.shopee.io/rest/api/2/status/10003",
+          "description": "This issue is under testing by QA in testing environment",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "TECH DESIGN",
-          "id": "11402",
+          "name": "Testing",
+          "id": "10003",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -2843,11 +3435,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/10303",
-          "description": "Common Biz FE Component Update according to the new standard",
+          "self": "https://jira.shopee.io/rest/api/2/status/10003",
+          "description": "This issue is under testing by QA in testing environment",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "Developing",
-          "id": "10303",
+          "name": "Testing",
+          "id": "10003",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -3198,7 +3790,21 @@
             "name": "MP CS Agent Console"
           }
         ],
-        "customfield_10306": null,
+        "customfield_10306": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=pufan.hu%40shopee.com",
+          "name": "pufan.hu@shopee.com",
+          "key": "pufan.hu@shopee.com",
+          "emailAddress": "pufan.hu@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/46419a2a6505434fcc134067b58bfcfe?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/46419a2a6505434fcc134067b58bfcfe?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/46419a2a6505434fcc134067b58bfcfe?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/46419a2a6505434fcc134067b58bfcfe?d=mm&s=32"
+          },
+          "displayName": "Puff",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
         "customfield_15707": "https://confluence.shopee.io/pages/viewpage.action?pageId=3132068322",
         "assignee": {
           "self": "https://jira.shopee.io/rest/api/2/user?username=pufan.hu%40shopee.com",
@@ -3234,11 +3840,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/11402",
-          "description": "",
+          "self": "https://jira.shopee.io/rest/api/2/status/10303",
+          "description": "Common Biz FE Component Update according to the new standard",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "TECH DESIGN",
-          "id": "11402",
+          "name": "Developing",
+          "id": "10303",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -3315,11 +3921,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/10303",
-          "description": "Common Biz FE Component Update according to the new standard",
+          "self": "https://jira.shopee.io/rest/api/2/status/10003",
+          "description": "This issue is under testing by QA in testing environment",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "Developing",
-          "id": "10303",
+          "name": "Testing",
+          "id": "10003",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -3396,11 +4002,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/10003",
-          "description": "This issue is under testing by QA in testing environment",
+          "self": "https://jira.shopee.io/rest/api/2/status/10160",
+          "description": "This issue is under testing by QAs in staging environment or UAT",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "Testing",
-          "id": "10003",
+          "name": "Staging",
+          "id": "10160",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -3500,7 +4106,7 @@
       "fields": {
         "summary": "Enable Premium CS for VIP+ Users in CSIH Portal - Customer Service [Epic for MP CS Channel]",
         "customfield_11546": null,
-        "customfield_36701": "2026-04-15",
+        "customfield_36701": "2026-05-13",
         "components": [
           {
             "self": "https://jira.shopee.io/rest/api/2/component/56306",
@@ -3581,7 +4187,7 @@
       "fields": {
         "summary": "AME - Dropship Solution for Myanmar Expansion - Customer Service [Epic for MP CS Channel]",
         "customfield_11546": null,
-        "customfield_36701": "2026-04-15",
+        "customfield_36701": "2026-05-13",
         "components": [
           {
             "self": "https://jira.shopee.io/rest/api/2/component/56306",
@@ -3662,7 +4268,7 @@
       "fields": {
         "summary": "AME - Dropship Solution for Myanmar Expansion - Customer Service [Epic for MP CS Info Search & API integration]",
         "customfield_11546": null,
-        "customfield_36701": "2026-04-15",
+        "customfield_36701": "2026-05-13",
         "components": [
           {
             "self": "https://jira.shopee.io/rest/api/2/component/14903",
@@ -4030,11 +4636,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/11402",
-          "description": "",
+          "self": "https://jira.shopee.io/rest/api/2/status/10303",
+          "description": "Common Biz FE Component Update according to the new standard",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "TECH DESIGN",
-          "id": "11402",
+          "name": "Developing",
+          "id": "10303",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -4053,7 +4659,7 @@
       "fields": {
         "summary": "Automate CS LGPD Non-Compliant Enquiries - Customer Service [Epic for MP CS Agent Console]",
         "customfield_11546": null,
-        "customfield_36701": null,
+        "customfield_36701": "2026-04-24",
         "components": [
           {
             "self": "https://jira.shopee.io/rest/api/2/component/56307",
@@ -4134,7 +4740,7 @@
       "fields": {
         "summary": "[Phase 1] BR Shipping Fee Cost Pass using AI Fault Attribution - Return Refund [Epic for MP DMS]",
         "customfield_11546": null,
-        "customfield_36701": null,
+        "customfield_36701": "2026-04-24",
         "components": [
           {
             "self": "https://jira.shopee.io/rest/api/2/component/37501",
@@ -4210,17 +4816,17 @@
           }
         ],
         "customfield_10306": {
-          "self": "https://jira.shopee.io/rest/api/2/user?username=mengchen.tang%40shopee.com",
-          "name": "mengchen.tang@shopee.com",
-          "key": "JIRAUSER38431",
-          "emailAddress": "mengchen.tang@shopee.com",
+          "self": "https://jira.shopee.io/rest/api/2/user?username=pengbin.feng%40shopee.com",
+          "name": "pengbin.feng@shopee.com",
+          "key": "JIRAUSER129519",
+          "emailAddress": "pengbin.feng@shopee.com",
           "avatarUrls": {
-            "48x48": "https://www.gravatar.com/avatar/bb87b0bfb630af39f2ba32de9fee5af6?d=mm&s=48",
-            "24x24": "https://www.gravatar.com/avatar/bb87b0bfb630af39f2ba32de9fee5af6?d=mm&s=24",
-            "16x16": "https://www.gravatar.com/avatar/bb87b0bfb630af39f2ba32de9fee5af6?d=mm&s=16",
-            "32x32": "https://www.gravatar.com/avatar/bb87b0bfb630af39f2ba32de9fee5af6?d=mm&s=32"
+            "48x48": "https://www.gravatar.com/avatar/86f108b913841db404f1a0006ce1a6ad?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/86f108b913841db404f1a0006ce1a6ad?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/86f108b913841db404f1a0006ce1a6ad?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/86f108b913841db404f1a0006ce1a6ad?d=mm&s=32"
           },
-          "displayName": "mengchen.tang@shopee.com",
+          "displayName": "Pengbin Feng",
           "active": true,
           "timeZone": "Asia/Singapore"
         },
@@ -4421,11 +5027,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/11402",
-          "description": "",
+          "self": "https://jira.shopee.io/rest/api/2/status/10303",
+          "description": "Common Biz FE Component Update according to the new standard",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "TECH DESIGN",
-          "id": "11402",
+          "name": "Developing",
+          "id": "10303",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -4745,11 +5351,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/11402",
-          "description": "",
+          "self": "https://jira.shopee.io/rest/api/2/status/10303",
+          "description": "Common Biz FE Component Update according to the new standard",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "TECH DESIGN",
-          "id": "11402",
+          "name": "Developing",
+          "id": "10303",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -4988,17 +5594,17 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/10601",
-          "description": "",
-          "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "UAT",
-          "id": "10601",
+          "self": "https://jira.shopee.io/rest/api/2/status/10002",
+          "description": "The development of this issue was completed and released.",
+          "iconUrl": "https://jira.shopee.io/",
+          "name": "Done",
+          "id": "10002",
           "statusCategory": {
-            "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
-            "id": 4,
-            "key": "indeterminate",
-            "colorName": "yellow",
-            "name": "In Progress"
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/3",
+            "id": 3,
+            "key": "done",
+            "colorName": "green",
+            "name": "Done"
           }
         }
       }
@@ -5150,11 +5756,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/11402",
-          "description": "",
+          "self": "https://jira.shopee.io/rest/api/2/status/10303",
+          "description": "Common Biz FE Component Update according to the new standard",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "TECH DESIGN",
-          "id": "11402",
+          "name": "Developing",
+          "id": "10303",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -5393,11 +5999,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/10303",
-          "description": "Common Biz FE Component Update according to the new standard",
+          "self": "https://jira.shopee.io/rest/api/2/status/10003",
+          "description": "This issue is under testing by QA in testing environment",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "Developing",
-          "id": "10303",
+          "name": "Testing",
+          "id": "10003",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -5474,11 +6080,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/10303",
-          "description": "Common Biz FE Component Update according to the new standard",
+          "self": "https://jira.shopee.io/rest/api/2/status/10003",
+          "description": "This issue is under testing by QA in testing environment",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "Developing",
-          "id": "10303",
+          "name": "Testing",
+          "id": "10003",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -5802,7 +6408,7 @@
       "fields": {
         "summary": "[CS WFM] Improvement to WFM Forecasting Model Phase 2.3 - Customer Service [Epic for MP CS Manager Console]",
         "customfield_11546": null,
-        "customfield_36701": "2026-04-24",
+        "customfield_36701": "2026-05-13",
         "components": [
           {
             "self": "https://jira.shopee.io/rest/api/2/component/58005",
@@ -6207,7 +6813,7 @@
       "fields": {
         "summary": "[All markets] Implement more system APIs to CS SmartKB for improving the Chatbot and Agent Assistant performance - Customer Service [Epic for MP CS Info Search & API integration]",
         "customfield_11546": null,
-        "customfield_36701": "2026-04-24",
+        "customfield_36701": "2026-04-30",
         "components": [
           {
             "self": "https://jira.shopee.io/rest/api/2/component/14903",
@@ -6346,11 +6952,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/10003",
-          "description": "This issue is under testing by QA in testing environment",
+          "self": "https://jira.shopee.io/rest/api/2/status/10601",
+          "description": "",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "Testing",
-          "id": "10003",
+          "name": "UAT",
+          "id": "10601",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -6500,87 +7106,6 @@
             "key": "done",
             "colorName": "green",
             "name": "Done"
-          }
-        }
-      }
-    },
-    {
-      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
-      "id": "10138252",
-      "self": "https://jira.shopee.io/rest/api/2/issue/10138252",
-      "key": "SPCSP-99693",
-      "fields": {
-        "summary": "Withhold seller funds in frozen accounts - Customer Service [Epic for MP CS Info Search & API integration]",
-        "customfield_11546": "2026-03-04",
-        "customfield_36701": "2026-03-04",
-        "components": [
-          {
-            "self": "https://jira.shopee.io/rest/api/2/component/14903",
-            "id": "14903",
-            "name": "MP CS Info Search & API integration"
-          }
-        ],
-        "customfield_10306": {
-          "self": "https://jira.shopee.io/rest/api/2/user?username=mingzhuo.he%40shopee.com",
-          "name": "mingzhuo.he@shopee.com",
-          "key": "JIRAUSER147631",
-          "emailAddress": "mingzhuo.he@shopee.com",
-          "avatarUrls": {
-            "48x48": "https://www.gravatar.com/avatar/ac24da8971b89ea0a698865990c9e9cb?d=mm&s=48",
-            "24x24": "https://www.gravatar.com/avatar/ac24da8971b89ea0a698865990c9e9cb?d=mm&s=24",
-            "16x16": "https://www.gravatar.com/avatar/ac24da8971b89ea0a698865990c9e9cb?d=mm&s=16",
-            "32x32": "https://www.gravatar.com/avatar/ac24da8971b89ea0a698865990c9e9cb?d=mm&s=32"
-          },
-          "displayName": "Mingzhuo He",
-          "active": true,
-          "timeZone": "Asia/Singapore"
-        },
-        "customfield_15707": "https://confluence.shopee.io/display/SCPM/Withhold+seller+funds+in+frozen+accounts",
-        "assignee": {
-          "self": "https://jira.shopee.io/rest/api/2/user?username=mingzhuo.he%40shopee.com",
-          "name": "mingzhuo.he@shopee.com",
-          "key": "JIRAUSER147631",
-          "emailAddress": "mingzhuo.he@shopee.com",
-          "avatarUrls": {
-            "48x48": "https://www.gravatar.com/avatar/ac24da8971b89ea0a698865990c9e9cb?d=mm&s=48",
-            "24x24": "https://www.gravatar.com/avatar/ac24da8971b89ea0a698865990c9e9cb?d=mm&s=24",
-            "16x16": "https://www.gravatar.com/avatar/ac24da8971b89ea0a698865990c9e9cb?d=mm&s=16",
-            "32x32": "https://www.gravatar.com/avatar/ac24da8971b89ea0a698865990c9e9cb?d=mm&s=32"
-          },
-          "displayName": "Mingzhuo He",
-          "active": true,
-          "timeZone": "Asia/Singapore"
-        },
-        "priority": {
-          "self": "https://jira.shopee.io/rest/api/2/priority/2",
-          "iconUrl": "https://jira.shopee.io/images/icons/priorities/high.svg",
-          "name": "High",
-          "id": "2"
-        },
-        "customfield_12411": {
-          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/79705",
-          "value": "Feature Project",
-          "id": "79705",
-          "disabled": false
-        },
-        "customfield_35604": {
-          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/64103",
-          "value": "Clearing & Settlement",
-          "id": "64103",
-          "disabled": false
-        },
-        "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/10303",
-          "description": "Common Biz FE Component Update according to the new standard",
-          "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "Developing",
-          "id": "10303",
-          "statusCategory": {
-            "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
-            "id": 4,
-            "key": "indeterminate",
-            "colorName": "yellow",
-            "name": "In Progress"
           }
         }
       }
@@ -6813,11 +7338,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/10303",
-          "description": "Common Biz FE Component Update according to the new standard",
+          "self": "https://jira.shopee.io/rest/api/2/status/10003",
+          "description": "This issue is under testing by QA in testing environment",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "Developing",
-          "id": "10303",
+          "name": "Testing",
+          "id": "10003",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -7623,11 +8148,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/11402",
-          "description": "",
+          "self": "https://jira.shopee.io/rest/api/2/status/10303",
+          "description": "Common Biz FE Component Update according to the new standard",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "TECH DESIGN",
-          "id": "11402",
+          "name": "Developing",
+          "id": "10303",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -7704,11 +8229,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/11402",
-          "description": "",
+          "self": "https://jira.shopee.io/rest/api/2/status/10303",
+          "description": "Common Biz FE Component Update according to the new standard",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "TECH DESIGN",
-          "id": "11402",
+          "name": "Developing",
+          "id": "10303",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -7785,11 +8310,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/11402",
-          "description": "",
+          "self": "https://jira.shopee.io/rest/api/2/status/10303",
+          "description": "Common Biz FE Component Update according to the new standard",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "TECH DESIGN",
-          "id": "11402",
+          "name": "Developing",
+          "id": "10303",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -7866,17 +8391,17 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/10160",
-          "description": "This issue is under testing by QAs in staging environment or UAT",
-          "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "Staging",
-          "id": "10160",
+          "self": "https://jira.shopee.io/rest/api/2/status/10002",
+          "description": "The development of this issue was completed and released.",
+          "iconUrl": "https://jira.shopee.io/",
+          "name": "Done",
+          "id": "10002",
           "statusCategory": {
-            "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
-            "id": 4,
-            "key": "indeterminate",
-            "colorName": "yellow",
-            "name": "In Progress"
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/3",
+            "id": 3,
+            "key": "done",
+            "colorName": "green",
+            "name": "Done"
           }
         }
       }
@@ -8141,33 +8666,33 @@
           }
         ],
         "customfield_10306": {
-          "self": "https://jira.shopee.io/rest/api/2/user?username=xinlei.lv%40shopee.com",
-          "name": "xinlei.lv@shopee.com",
-          "key": "JIRAUSER168834",
-          "emailAddress": "xinlei.lv@shopee.com",
+          "self": "https://jira.shopee.io/rest/api/2/user?username=miaofeng.gao%40shopee.com",
+          "name": "miaofeng.gao@shopee.com",
+          "key": "JIRAUSER173316",
+          "emailAddress": "miaofeng.gao@shopee.com",
           "avatarUrls": {
-            "48x48": "https://www.gravatar.com/avatar/9902dfd4b95304e6616dad9d551f7c83?d=mm&s=48",
-            "24x24": "https://www.gravatar.com/avatar/9902dfd4b95304e6616dad9d551f7c83?d=mm&s=24",
-            "16x16": "https://www.gravatar.com/avatar/9902dfd4b95304e6616dad9d551f7c83?d=mm&s=16",
-            "32x32": "https://www.gravatar.com/avatar/9902dfd4b95304e6616dad9d551f7c83?d=mm&s=32"
+            "48x48": "https://www.gravatar.com/avatar/2fa69ffa21d04832f45294962b696562?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/2fa69ffa21d04832f45294962b696562?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/2fa69ffa21d04832f45294962b696562?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/2fa69ffa21d04832f45294962b696562?d=mm&s=32"
           },
-          "displayName": "Xinlei Lv",
+          "displayName": "Miaofeng Gao",
           "active": true,
           "timeZone": "Asia/Singapore"
         },
         "customfield_15707": "https://confluence.shopee.io/display/CHATBOT/Improve+Invoice+Issues+in+Seller+Chatbot",
         "assignee": {
-          "self": "https://jira.shopee.io/rest/api/2/user?username=rong.zhang%40shopee.com",
-          "name": "rong.zhang@shopee.com",
-          "key": "rong.zhang@shopee.com",
-          "emailAddress": "rong.zhang@shopee.com",
+          "self": "https://jira.shopee.io/rest/api/2/user?username=miaofeng.gao%40shopee.com",
+          "name": "miaofeng.gao@shopee.com",
+          "key": "JIRAUSER173316",
+          "emailAddress": "miaofeng.gao@shopee.com",
           "avatarUrls": {
-            "48x48": "https://www.gravatar.com/avatar/4ad0236f40df02c5c2ae01802eeab97f?d=mm&s=48",
-            "24x24": "https://www.gravatar.com/avatar/4ad0236f40df02c5c2ae01802eeab97f?d=mm&s=24",
-            "16x16": "https://www.gravatar.com/avatar/4ad0236f40df02c5c2ae01802eeab97f?d=mm&s=16",
-            "32x32": "https://www.gravatar.com/avatar/4ad0236f40df02c5c2ae01802eeab97f?d=mm&s=32"
+            "48x48": "https://www.gravatar.com/avatar/2fa69ffa21d04832f45294962b696562?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/2fa69ffa21d04832f45294962b696562?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/2fa69ffa21d04832f45294962b696562?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/2fa69ffa21d04832f45294962b696562?d=mm&s=32"
           },
-          "displayName": "rong.zhang@shopee.com",
+          "displayName": "Miaofeng Gao",
           "active": true,
           "timeZone": "Asia/Singapore"
         },
@@ -8303,17 +8828,17 @@
           }
         ],
         "customfield_10306": {
-          "self": "https://jira.shopee.io/rest/api/2/user?username=miao.he%40shopee.com",
-          "name": "miao.he@shopee.com",
-          "key": "JIRAUSER38016",
-          "emailAddress": "miao.he@shopee.com",
+          "self": "https://jira.shopee.io/rest/api/2/user?username=kaiyang.chen%40shopee.com",
+          "name": "kaiyang.chen@shopee.com",
+          "key": "JIRAUSER140723",
+          "emailAddress": "kaiyang.chen@shopee.com",
           "avatarUrls": {
-            "48x48": "https://www.gravatar.com/avatar/b0fefa90477c2ccd79068fbbe298164f?d=mm&s=48",
-            "24x24": "https://www.gravatar.com/avatar/b0fefa90477c2ccd79068fbbe298164f?d=mm&s=24",
-            "16x16": "https://www.gravatar.com/avatar/b0fefa90477c2ccd79068fbbe298164f?d=mm&s=16",
-            "32x32": "https://www.gravatar.com/avatar/b0fefa90477c2ccd79068fbbe298164f?d=mm&s=32"
+            "48x48": "https://www.gravatar.com/avatar/bad6c27e332f74c71da4f21446c99d56?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/bad6c27e332f74c71da4f21446c99d56?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/bad6c27e332f74c71da4f21446c99d56?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/bad6c27e332f74c71da4f21446c99d56?d=mm&s=32"
           },
-          "displayName": "miao.he@shopee.com",
+          "displayName": "Kaiyang Chen",
           "active": true,
           "timeZone": "Asia/Singapore"
         },
@@ -8352,17 +8877,17 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/10601",
-          "description": "",
-          "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "UAT",
-          "id": "10601",
+          "self": "https://jira.shopee.io/rest/api/2/status/10002",
+          "description": "The development of this issue was completed and released.",
+          "iconUrl": "https://jira.shopee.io/",
+          "name": "Done",
+          "id": "10002",
           "statusCategory": {
-            "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
-            "id": 4,
-            "key": "indeterminate",
-            "colorName": "yellow",
-            "name": "In Progress"
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/3",
+            "id": 3,
+            "key": "done",
+            "colorName": "green",
+            "name": "Done"
           }
         }
       }
@@ -8699,7 +9224,7 @@
       "fields": {
         "summary": "Future RR AI Judging System - UI Enhancement",
         "customfield_11546": null,
-        "customfield_36701": null,
+        "customfield_36701": "2026-05-15",
         "components": [
           {
             "self": "https://jira.shopee.io/rest/api/2/component/37501",
@@ -8941,7 +9466,7 @@
       "key": "SPCSP-98896",
       "fields": {
         "summary": "Future RR AI Judging System - QA Part 2",
-        "customfield_11546": null,
+        "customfield_11546": "2026-04-22",
         "customfield_36701": "2026-04-17",
         "components": [
           {
@@ -8965,7 +9490,7 @@
           "active": true,
           "timeZone": "Asia/Singapore"
         },
-        "customfield_15707": null,
+        "customfield_15707": "https://confluence.shopee.io/x/0qYTv",
         "assignee": {
           "self": "https://jira.shopee.io/rest/api/2/user?username=xun.li%40shopee.com",
           "name": "xun.li@shopee.com",
@@ -9000,11 +9525,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/10701",
+          "self": "https://jira.shopee.io/rest/api/2/status/11402",
           "description": "",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "PRD",
-          "id": "10701",
+          "name": "TECH DESIGN",
+          "id": "11402",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -9081,11 +9606,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/10601",
-          "description": "",
+          "self": "https://jira.shopee.io/rest/api/2/status/10160",
+          "description": "This issue is under testing by QAs in staging environment or UAT",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "UAT",
-          "id": "10601",
+          "name": "Staging",
+          "id": "10160",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -9481,11 +10006,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/10003",
-          "description": "This issue is under testing by QA in testing environment",
+          "self": "https://jira.shopee.io/rest/api/2/status/10601",
+          "description": "",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "Testing",
-          "id": "10003",
+          "name": "UAT",
+          "id": "10601",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -9503,7 +10028,7 @@
       "key": "SPCSP-98748",
       "fields": {
         "summary": "Extend Lost Threshold API Integration in Chatbot - Customer Service [Epic for MP CS Info Search & API integration]",
-        "customfield_11546": null,
+        "customfield_11546": "2026-04-17",
         "customfield_36701": "2026-04-17",
         "components": [
           {
@@ -9527,7 +10052,7 @@
           "active": true,
           "timeZone": "Asia/Singapore"
         },
-        "customfield_15707": null,
+        "customfield_15707": "https://confluence.shopee.io/display/CHATBOT/Order+Bot+v10.4+Extend+Lost+Threshold+API+Integration",
         "assignee": {
           "self": "https://jira.shopee.io/rest/api/2/user?username=jiamin.qi%40shopee.com",
           "name": "jiamin.qi@shopee.com",
@@ -9562,11 +10087,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/10701",
+          "self": "https://jira.shopee.io/rest/api/2/status/11402",
           "description": "",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "PRD",
-          "id": "10701",
+          "name": "TECH DESIGN",
+          "id": "11402",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -9719,17 +10244,17 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/10601",
-          "description": "",
-          "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "UAT",
-          "id": "10601",
+          "self": "https://jira.shopee.io/rest/api/2/status/10002",
+          "description": "The development of this issue was completed and released.",
+          "iconUrl": "https://jira.shopee.io/",
+          "name": "Done",
+          "id": "10002",
           "statusCategory": {
-            "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
-            "id": 4,
-            "key": "indeterminate",
-            "colorName": "yellow",
-            "name": "In Progress"
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/3",
+            "id": 3,
+            "key": "done",
+            "colorName": "green",
+            "name": "Done"
           }
         }
       }
@@ -11981,17 +12506,17 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/10601",
-          "description": "",
-          "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "UAT",
-          "id": "10601",
+          "self": "https://jira.shopee.io/rest/api/2/status/10002",
+          "description": "The development of this issue was completed and released.",
+          "iconUrl": "https://jira.shopee.io/",
+          "name": "Done",
+          "id": "10002",
           "statusCategory": {
-            "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
-            "id": 4,
-            "key": "indeterminate",
-            "colorName": "yellow",
-            "name": "In Progress"
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/3",
+            "id": 3,
+            "key": "done",
+            "colorName": "green",
+            "name": "Done"
           }
         }
       }
@@ -12409,7 +12934,7 @@
       "fields": {
         "summary": "Ingest Booking ID dataset from SLS to CSIH for RTS Lost/Damage Claim to Support Cache Fulfilment Program - Customer Service [Epic for MP CS Channel]",
         "customfield_11546": null,
-        "customfield_36701": "2026-04-15",
+        "customfield_36701": "2026-04-29",
         "components": [
           {
             "self": "https://jira.shopee.io/rest/api/2/component/56306",
@@ -13035,87 +13560,6 @@
             "key": "new",
             "colorName": "blue-gray",
             "name": "To Do"
-          }
-        }
-      }
-    },
-    {
-      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
-      "id": "9820621",
-      "self": "https://jira.shopee.io/rest/api/2/issue/9820621",
-      "key": "SPCSP-96582",
-      "fields": {
-        "summary": "Enhance Auto-Judge Centre with new fields to support rule creation - Return Refund [Epic for MP DMS]",
-        "customfield_11546": "2026-03-30",
-        "customfield_36701": "2027-03-30",
-        "components": [
-          {
-            "self": "https://jira.shopee.io/rest/api/2/component/37501",
-            "id": "37501",
-            "name": "MP DMS"
-          }
-        ],
-        "customfield_10306": {
-          "self": "https://jira.shopee.io/rest/api/2/user?username=becky.tanyw%40shopee.com",
-          "name": "becky.tanyw@shopee.com",
-          "key": "JIRAUSER162850",
-          "emailAddress": "becky.tanyw@shopee.com",
-          "avatarUrls": {
-            "48x48": "https://www.gravatar.com/avatar/f28da0a5d0d9371f09124d44c6792311?d=mm&s=48",
-            "24x24": "https://www.gravatar.com/avatar/f28da0a5d0d9371f09124d44c6792311?d=mm&s=24",
-            "16x16": "https://www.gravatar.com/avatar/f28da0a5d0d9371f09124d44c6792311?d=mm&s=16",
-            "32x32": "https://www.gravatar.com/avatar/f28da0a5d0d9371f09124d44c6792311?d=mm&s=32"
-          },
-          "displayName": "Tan Yu Wen Becky",
-          "active": true,
-          "timeZone": "Asia/Singapore"
-        },
-        "customfield_15707": "https://confluence.shopee.io/display/SPCT/%5BDRAFT+PRD%5D+Enhance+Auto-Judge+Centre+with+new+fields+to+support+Automation",
-        "assignee": {
-          "self": "https://jira.shopee.io/rest/api/2/user?username=becky.tanyw%40shopee.com",
-          "name": "becky.tanyw@shopee.com",
-          "key": "JIRAUSER162850",
-          "emailAddress": "becky.tanyw@shopee.com",
-          "avatarUrls": {
-            "48x48": "https://www.gravatar.com/avatar/f28da0a5d0d9371f09124d44c6792311?d=mm&s=48",
-            "24x24": "https://www.gravatar.com/avatar/f28da0a5d0d9371f09124d44c6792311?d=mm&s=24",
-            "16x16": "https://www.gravatar.com/avatar/f28da0a5d0d9371f09124d44c6792311?d=mm&s=16",
-            "32x32": "https://www.gravatar.com/avatar/f28da0a5d0d9371f09124d44c6792311?d=mm&s=32"
-          },
-          "displayName": "Tan Yu Wen Becky",
-          "active": true,
-          "timeZone": "Asia/Singapore"
-        },
-        "priority": {
-          "self": "https://jira.shopee.io/rest/api/2/priority/2",
-          "iconUrl": "https://jira.shopee.io/images/icons/priorities/high.svg",
-          "name": "High",
-          "id": "2"
-        },
-        "customfield_12411": {
-          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/79705",
-          "value": "Feature Project",
-          "id": "79705",
-          "disabled": false
-        },
-        "customfield_35604": {
-          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/64102",
-          "value": "Return Refund",
-          "id": "64102",
-          "disabled": false
-        },
-        "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/11402",
-          "description": "",
-          "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "TECH DESIGN",
-          "id": "11402",
-          "statusCategory": {
-            "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
-            "id": 4,
-            "key": "indeterminate",
-            "colorName": "yellow",
-            "name": "In Progress"
           }
         }
       }
@@ -14985,8 +15429,8 @@
       "key": "SPCSP-94643",
       "fields": {
         "summary": "Implement Customer Support Features for BR Standalone App - Customer Service [Epic for Other Biz lines CS]",
-        "customfield_11546": "2026-03-18",
-        "customfield_36701": "2026-03-18",
+        "customfield_11546": "2026-04-20",
+        "customfield_36701": "2026-04-20",
         "components": [
           {
             "self": "https://jira.shopee.io/rest/api/2/component/100908",
@@ -17735,7 +18179,7 @@
       "fields": {
         "summary": "To implement VN VAT Tax on goods and implement a buyer KYC logic - Return Refund [Epic for MP DMS]",
         "customfield_11546": null,
-        "customfield_36701": "2026-04-21",
+        "customfield_36701": "2026-05-08",
         "components": [
           {
             "self": "https://jira.shopee.io/rest/api/2/component/37501",
@@ -28579,17 +29023,17 @@
         },
         "customfield_15707": null,
         "assignee": {
-          "self": "https://jira.shopee.io/rest/api/2/user?username=yuanjie.long%40shopee.com",
-          "name": "yuanjie.long@shopee.com",
-          "key": "JIRAUSER22383",
-          "emailAddress": "yuanjie.long@shopee.com",
+          "self": "https://jira.shopee.io/rest/api/2/user?username=natasya.fanuel%40shopee.com",
+          "name": "natasya.fanuel@shopee.com",
+          "key": "JIRAUSER156503",
+          "emailAddress": "natasya.fanuel@shopee.com",
           "avatarUrls": {
-            "48x48": "https://www.gravatar.com/avatar/809389793417358d540cffd0dd102c3d?d=mm&s=48",
-            "24x24": "https://www.gravatar.com/avatar/809389793417358d540cffd0dd102c3d?d=mm&s=24",
-            "16x16": "https://www.gravatar.com/avatar/809389793417358d540cffd0dd102c3d?d=mm&s=16",
-            "32x32": "https://www.gravatar.com/avatar/809389793417358d540cffd0dd102c3d?d=mm&s=32"
+            "48x48": "https://www.gravatar.com/avatar/9525e46056cbed5e44970cfa05ed9d3c?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/9525e46056cbed5e44970cfa05ed9d3c?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/9525e46056cbed5e44970cfa05ed9d3c?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/9525e46056cbed5e44970cfa05ed9d3c?d=mm&s=32"
           },
-          "displayName": "yuanjie.long@shopee.com",
+          "displayName": "Putri Natasya Fanuel",
           "active": true,
           "timeZone": "Asia/Singapore"
         },
@@ -28660,17 +29104,17 @@
         },
         "customfield_15707": null,
         "assignee": {
-          "self": "https://jira.shopee.io/rest/api/2/user?username=yuanjie.long%40shopee.com",
-          "name": "yuanjie.long@shopee.com",
-          "key": "JIRAUSER22383",
-          "emailAddress": "yuanjie.long@shopee.com",
+          "self": "https://jira.shopee.io/rest/api/2/user?username=ariel.tanyx%40shopee.com",
+          "name": "ariel.tanyx@shopee.com",
+          "key": "JIRAUSER133448",
+          "emailAddress": "ariel.tanyx@shopee.com",
           "avatarUrls": {
-            "48x48": "https://www.gravatar.com/avatar/809389793417358d540cffd0dd102c3d?d=mm&s=48",
-            "24x24": "https://www.gravatar.com/avatar/809389793417358d540cffd0dd102c3d?d=mm&s=24",
-            "16x16": "https://www.gravatar.com/avatar/809389793417358d540cffd0dd102c3d?d=mm&s=16",
-            "32x32": "https://www.gravatar.com/avatar/809389793417358d540cffd0dd102c3d?d=mm&s=32"
+            "48x48": "https://jira.shopee.io/secure/useravatar?avatarId=10341",
+            "24x24": "https://jira.shopee.io/secure/useravatar?size=small&avatarId=10341",
+            "16x16": "https://jira.shopee.io/secure/useravatar?size=xsmall&avatarId=10341",
+            "32x32": "https://jira.shopee.io/secure/useravatar?size=medium&avatarId=10341"
           },
-          "displayName": "yuanjie.long@shopee.com",
+          "displayName": "Tan Yu Xuan Ariel",
           "active": true,
           "timeZone": "Asia/Singapore"
         },
@@ -32249,6 +32693,654 @@
     },
     {
       "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "10510687",
+      "self": "https://jira.shopee.io/rest/api/2/issue/10510687",
+      "key": "SPCB-66781",
+      "fields": {
+        "summary": "(dev自测）AA中发送富文本时，发现当前Chatbot Sdk无法发送文件，且图片视频无法在Agent端预览",
+        "customfield_11546": "2026-04-21",
+        "customfield_36701": "2026-01-27",
+        "components": [
+          {
+            "self": "https://jira.shopee.io/rest/api/2/component/101317",
+            "id": "101317",
+            "name": "Chatbot Knowledge"
+          }
+        ],
+        "customfield_10306": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=xinsen.hu%40shopee.com",
+          "name": "xinsen.hu@shopee.com",
+          "key": "JIRAUSER43569",
+          "emailAddress": "xinsen.hu@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/c67d2cef4029cc99af8dee8abbac6a66?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/c67d2cef4029cc99af8dee8abbac6a66?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/c67d2cef4029cc99af8dee8abbac6a66?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/c67d2cef4029cc99af8dee8abbac6a66?d=mm&s=32"
+          },
+          "displayName": "xinsen.hu@shopee.com",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "customfield_15707": "https://confluence.shopee.io/pages/viewpage.action?pageId=3041657599",
+        "assignee": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=xinsen.hu%40shopee.com",
+          "name": "xinsen.hu@shopee.com",
+          "key": "JIRAUSER43569",
+          "emailAddress": "xinsen.hu@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/c67d2cef4029cc99af8dee8abbac6a66?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/c67d2cef4029cc99af8dee8abbac6a66?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/c67d2cef4029cc99af8dee8abbac6a66?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/c67d2cef4029cc99af8dee8abbac6a66?d=mm&s=32"
+          },
+          "displayName": "xinsen.hu@shopee.com",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "priority": {
+          "self": "https://jira.shopee.io/rest/api/2/priority/2",
+          "iconUrl": "https://jira.shopee.io/images/icons/priorities/high.svg",
+          "name": "High",
+          "id": "2"
+        },
+        "customfield_12411": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/76400",
+          "value": "Feature Project",
+          "id": "76400",
+          "disabled": false
+        },
+        "customfield_35604": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/73600",
+          "value": "Customer Service",
+          "id": "73600",
+          "disabled": false
+        },
+        "status": {
+          "self": "https://jira.shopee.io/rest/api/2/status/10701",
+          "description": "",
+          "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
+          "name": "PRD",
+          "id": "10701",
+          "statusCategory": {
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
+            "id": 4,
+            "key": "indeterminate",
+            "colorName": "yellow",
+            "name": "In Progress"
+          }
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "10506306",
+      "self": "https://jira.shopee.io/rest/api/2/issue/10506306",
+      "key": "SPCB-66746",
+      "fields": {
+        "summary": "Automate Seller Chatbot Flows via Logistics/Payment API Integration - Chatbot-CS [Epic for UIUX]",
+        "customfield_11546": null,
+        "customfield_36701": null,
+        "components": [
+          {
+            "self": "https://jira.shopee.io/rest/api/2/component/100808",
+            "id": "100808",
+            "name": "UIUX"
+          }
+        ],
+        "customfield_10306": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=danqian.wang%40shopee.com",
+          "name": "danqian.wang@shopee.com",
+          "key": "JIRAUSER37226",
+          "emailAddress": "danqian.wang@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=32"
+          },
+          "displayName": "danqian.wang@shopee.com",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "customfield_15707": null,
+        "assignee": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=danqian.wang%40shopee.com",
+          "name": "danqian.wang@shopee.com",
+          "key": "JIRAUSER37226",
+          "emailAddress": "danqian.wang@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=32"
+          },
+          "displayName": "danqian.wang@shopee.com",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "priority": {
+          "self": "https://jira.shopee.io/rest/api/2/priority/2",
+          "iconUrl": "https://jira.shopee.io/images/icons/priorities/high.svg",
+          "name": "High",
+          "id": "2"
+        },
+        "customfield_12411": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/76400",
+          "value": "Feature Project",
+          "id": "76400",
+          "disabled": false
+        },
+        "customfield_35604": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/73600",
+          "value": "Customer Service",
+          "id": "73600",
+          "disabled": false
+        },
+        "status": {
+          "self": "https://jira.shopee.io/rest/api/2/status/1",
+          "description": "TPM Review if the requirement needs to be supported.",
+          "iconUrl": "https://jira.shopee.io/images/icons/statuses/open.png",
+          "name": "Waiting",
+          "id": "1",
+          "statusCategory": {
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/2",
+            "id": 2,
+            "key": "new",
+            "colorName": "blue-gray",
+            "name": "To Do"
+          }
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "10494833",
+      "self": "https://jira.shopee.io/rest/api/2/issue/10494833",
+      "key": "SPCB-66663",
+      "fields": {
+        "summary": "Phase 2 - AI Supervision - Agent Assistant Adapt to Smart KB - 14 - A & Auto Greeting Issue Alignment- Chatbot-Platform [Epic for Chatbot Knowledge]",
+        "customfield_11546": null,
+        "customfield_36701": "2026-04-17",
+        "components": [
+          {
+            "self": "https://jira.shopee.io/rest/api/2/component/101317",
+            "id": "101317",
+            "name": "Chatbot Knowledge"
+          }
+        ],
+        "customfield_10306": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=kaiyang.chen%40shopee.com",
+          "name": "kaiyang.chen@shopee.com",
+          "key": "JIRAUSER140723",
+          "emailAddress": "kaiyang.chen@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/bad6c27e332f74c71da4f21446c99d56?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/bad6c27e332f74c71da4f21446c99d56?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/bad6c27e332f74c71da4f21446c99d56?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/bad6c27e332f74c71da4f21446c99d56?d=mm&s=32"
+          },
+          "displayName": "Kaiyang Chen",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "customfield_15707": null,
+        "assignee": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=xi.cen%40shopee.com",
+          "name": "xi.cen@shopee.com",
+          "key": "JIRAUSER51642",
+          "emailAddress": "xi.cen@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/97a97ae8feb0e0ee3f61fe5e9d3f8900?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/97a97ae8feb0e0ee3f61fe5e9d3f8900?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/97a97ae8feb0e0ee3f61fe5e9d3f8900?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/97a97ae8feb0e0ee3f61fe5e9d3f8900?d=mm&s=32"
+          },
+          "displayName": "Xi Cen",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "priority": {
+          "self": "https://jira.shopee.io/rest/api/2/priority/2",
+          "iconUrl": "https://jira.shopee.io/images/icons/priorities/high.svg",
+          "name": "High",
+          "id": "2"
+        },
+        "customfield_12411": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/76400",
+          "value": "Feature Project",
+          "id": "76400",
+          "disabled": false
+        },
+        "customfield_35604": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/73600",
+          "value": "Customer Service",
+          "id": "73600",
+          "disabled": false
+        },
+        "status": {
+          "self": "https://jira.shopee.io/rest/api/2/status/1",
+          "description": "TPM Review if the requirement needs to be supported.",
+          "iconUrl": "https://jira.shopee.io/images/icons/statuses/open.png",
+          "name": "Waiting",
+          "id": "1",
+          "statusCategory": {
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/2",
+            "id": 2,
+            "key": "new",
+            "colorName": "blue-gray",
+            "name": "To Do"
+          }
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "10490089",
+      "self": "https://jira.shopee.io/rest/api/2/issue/10490089",
+      "key": "SPCB-66657",
+      "fields": {
+        "summary": "（DEV自测）Seller AA - PC Title UI enhancement",
+        "customfield_11546": "2026-04-14",
+        "customfield_36701": null,
+        "components": [
+          {
+            "self": "https://jira.shopee.io/rest/api/2/component/100808",
+            "id": "100808",
+            "name": "UIUX"
+          }
+        ],
+        "customfield_10306": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=jiamin.qi%40shopee.com",
+          "name": "jiamin.qi@shopee.com",
+          "key": "JIRAUSER79030",
+          "emailAddress": "jiamin.qi@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://jira.shopee.io/secure/useravatar?avatarId=10337",
+            "24x24": "https://jira.shopee.io/secure/useravatar?size=small&avatarId=10337",
+            "16x16": "https://jira.shopee.io/secure/useravatar?size=xsmall&avatarId=10337",
+            "32x32": "https://jira.shopee.io/secure/useravatar?size=medium&avatarId=10337"
+          },
+          "displayName": "jiamin.qi@shopee.com",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "customfield_15707": null,
+        "assignee": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=danqian.wang%40shopee.com",
+          "name": "danqian.wang@shopee.com",
+          "key": "JIRAUSER37226",
+          "emailAddress": "danqian.wang@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=32"
+          },
+          "displayName": "danqian.wang@shopee.com",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "priority": {
+          "self": "https://jira.shopee.io/rest/api/2/priority/2",
+          "iconUrl": "https://jira.shopee.io/images/icons/priorities/high.svg",
+          "name": "High",
+          "id": "2"
+        },
+        "customfield_12411": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/76400",
+          "value": "Feature Project",
+          "id": "76400",
+          "disabled": false
+        },
+        "customfield_35604": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/73865",
+          "value": "Chatbot-CS",
+          "id": "73865",
+          "disabled": false
+        },
+        "status": {
+          "self": "https://jira.shopee.io/rest/api/2/status/10002",
+          "description": "The development of this issue was completed and released.",
+          "iconUrl": "https://jira.shopee.io/",
+          "name": "Done",
+          "id": "10002",
+          "statusCategory": {
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/3",
+            "id": 3,
+            "key": "done",
+            "colorName": "green",
+            "name": "Done"
+          }
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "10489097",
+      "self": "https://jira.shopee.io/rest/api/2/issue/10489097",
+      "key": "SPCB-66627",
+      "fields": {
+        "summary": "【支持流式输出】MY Chatbot supports dynamic translation",
+        "customfield_11546": "2026-04-14",
+        "customfield_36701": "2026-04-14",
+        "components": [
+          {
+            "self": "https://jira.shopee.io/rest/api/2/component/100808",
+            "id": "100808",
+            "name": "UIUX"
+          }
+        ],
+        "customfield_10306": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=danqian.wang%40shopee.com",
+          "name": "danqian.wang@shopee.com",
+          "key": "JIRAUSER37226",
+          "emailAddress": "danqian.wang@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=32"
+          },
+          "displayName": "danqian.wang@shopee.com",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "customfield_15707": "https://confluence.shopee.io/pages/viewpage.action?spaceKey=CHATBOT&title=%5BPRD%5D+MY+Chatbot+supports+dynamic+translation",
+        "assignee": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=danqian.wang%40shopee.com",
+          "name": "danqian.wang@shopee.com",
+          "key": "JIRAUSER37226",
+          "emailAddress": "danqian.wang@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=32"
+          },
+          "displayName": "danqian.wang@shopee.com",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "priority": {
+          "self": "https://jira.shopee.io/rest/api/2/priority/2",
+          "iconUrl": "https://jira.shopee.io/images/icons/priorities/high.svg",
+          "name": "High",
+          "id": "2"
+        },
+        "customfield_12411": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/76400",
+          "value": "Feature Project",
+          "id": "76400",
+          "disabled": false
+        },
+        "customfield_35604": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/73865",
+          "value": "Chatbot-CS",
+          "id": "73865",
+          "disabled": false
+        },
+        "status": {
+          "self": "https://jira.shopee.io/rest/api/2/status/1",
+          "description": "TPM Review if the requirement needs to be supported.",
+          "iconUrl": "https://jira.shopee.io/images/icons/statuses/open.png",
+          "name": "Waiting",
+          "id": "1",
+          "statusCategory": {
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/2",
+            "id": 2,
+            "key": "new",
+            "colorName": "blue-gray",
+            "name": "To Do"
+          }
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "10488845",
+      "self": "https://jira.shopee.io/rest/api/2/issue/10488845",
+      "key": "SPCB-66626",
+      "fields": {
+        "summary": "BR Shipping Fee Cost Pass using AI Fault Attribution - Chatbot-Platform [Epic for Chatbot Knowledge]",
+        "customfield_11546": null,
+        "customfield_36701": null,
+        "components": [
+          {
+            "self": "https://jira.shopee.io/rest/api/2/component/101317",
+            "id": "101317",
+            "name": "Chatbot Knowledge"
+          }
+        ],
+        "customfield_10306": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=xi.cen%40shopee.com",
+          "name": "xi.cen@shopee.com",
+          "key": "JIRAUSER51642",
+          "emailAddress": "xi.cen@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/97a97ae8feb0e0ee3f61fe5e9d3f8900?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/97a97ae8feb0e0ee3f61fe5e9d3f8900?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/97a97ae8feb0e0ee3f61fe5e9d3f8900?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/97a97ae8feb0e0ee3f61fe5e9d3f8900?d=mm&s=32"
+          },
+          "displayName": "Xi Cen",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "customfield_15707": null,
+        "assignee": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=xi.cen%40shopee.com",
+          "name": "xi.cen@shopee.com",
+          "key": "JIRAUSER51642",
+          "emailAddress": "xi.cen@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/97a97ae8feb0e0ee3f61fe5e9d3f8900?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/97a97ae8feb0e0ee3f61fe5e9d3f8900?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/97a97ae8feb0e0ee3f61fe5e9d3f8900?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/97a97ae8feb0e0ee3f61fe5e9d3f8900?d=mm&s=32"
+          },
+          "displayName": "Xi Cen",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "priority": {
+          "self": "https://jira.shopee.io/rest/api/2/priority/2",
+          "iconUrl": "https://jira.shopee.io/images/icons/priorities/high.svg",
+          "name": "High",
+          "id": "2"
+        },
+        "customfield_12411": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/76400",
+          "value": "Feature Project",
+          "id": "76400",
+          "disabled": false
+        },
+        "customfield_35604": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/64102",
+          "value": "Return Refund",
+          "id": "64102",
+          "disabled": false
+        },
+        "status": {
+          "self": "https://jira.shopee.io/rest/api/2/status/1",
+          "description": "TPM Review if the requirement needs to be supported.",
+          "iconUrl": "https://jira.shopee.io/images/icons/statuses/open.png",
+          "name": "Waiting",
+          "id": "1",
+          "statusCategory": {
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/2",
+            "id": 2,
+            "key": "new",
+            "colorName": "blue-gray",
+            "name": "To Do"
+          }
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "10487980",
+      "self": "https://jira.shopee.io/rest/api/2/issue/10487980",
+      "key": "SPCB-66621",
+      "fields": {
+        "summary": "Increase DRM Awareness in SC - Chatbot-CS [Epic for UIUX]",
+        "customfield_11546": null,
+        "customfield_36701": null,
+        "components": [
+          {
+            "self": "https://jira.shopee.io/rest/api/2/component/100808",
+            "id": "100808",
+            "name": "UIUX"
+          }
+        ],
+        "customfield_10306": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=jiamin.qi%40shopee.com",
+          "name": "jiamin.qi@shopee.com",
+          "key": "JIRAUSER79030",
+          "emailAddress": "jiamin.qi@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://jira.shopee.io/secure/useravatar?avatarId=10337",
+            "24x24": "https://jira.shopee.io/secure/useravatar?size=small&avatarId=10337",
+            "16x16": "https://jira.shopee.io/secure/useravatar?size=xsmall&avatarId=10337",
+            "32x32": "https://jira.shopee.io/secure/useravatar?size=medium&avatarId=10337"
+          },
+          "displayName": "jiamin.qi@shopee.com",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "customfield_15707": null,
+        "assignee": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=danqian.wang%40shopee.com",
+          "name": "danqian.wang@shopee.com",
+          "key": "JIRAUSER37226",
+          "emailAddress": "danqian.wang@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=32"
+          },
+          "displayName": "danqian.wang@shopee.com",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "priority": {
+          "self": "https://jira.shopee.io/rest/api/2/priority/2",
+          "iconUrl": "https://jira.shopee.io/images/icons/priorities/high.svg",
+          "name": "High",
+          "id": "2"
+        },
+        "customfield_12411": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/76400",
+          "value": "Feature Project",
+          "id": "76400",
+          "disabled": false
+        },
+        "customfield_35604": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/64127",
+          "value": "Chat Seller Management",
+          "id": "64127",
+          "disabled": false
+        },
+        "status": {
+          "self": "https://jira.shopee.io/rest/api/2/status/1",
+          "description": "TPM Review if the requirement needs to be supported.",
+          "iconUrl": "https://jira.shopee.io/images/icons/statuses/open.png",
+          "name": "Waiting",
+          "id": "1",
+          "statusCategory": {
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/2",
+            "id": 2,
+            "key": "new",
+            "colorName": "blue-gray",
+            "name": "To Do"
+          }
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+      "id": "10487976",
+      "self": "https://jira.shopee.io/rest/api/2/issue/10487976",
+      "key": "SPCB-66620",
+      "fields": {
+        "summary": "Increase DRM Awareness in SC - Chatbot-Shop [Epic for Shop Chatbot]",
+        "customfield_11546": null,
+        "customfield_36701": null,
+        "components": [
+          {
+            "self": "https://jira.shopee.io/rest/api/2/component/94510",
+            "id": "94510",
+            "name": "Shop Chatbot"
+          }
+        ],
+        "customfield_10306": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=gary.tian%40shopee.com",
+          "name": "gary.tian@shopee.com",
+          "key": "JIRAUSER140433",
+          "emailAddress": "gary.tian@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/16db28a15901ddfbdfcd0c5cf2030584?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/16db28a15901ddfbdfcd0c5cf2030584?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/16db28a15901ddfbdfcd0c5cf2030584?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/16db28a15901ddfbdfcd0c5cf2030584?d=mm&s=32"
+          },
+          "displayName": "Tian Gary",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "customfield_15707": null,
+        "assignee": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=gary.tian%40shopee.com",
+          "name": "gary.tian@shopee.com",
+          "key": "JIRAUSER140433",
+          "emailAddress": "gary.tian@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/16db28a15901ddfbdfcd0c5cf2030584?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/16db28a15901ddfbdfcd0c5cf2030584?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/16db28a15901ddfbdfcd0c5cf2030584?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/16db28a15901ddfbdfcd0c5cf2030584?d=mm&s=32"
+          },
+          "displayName": "Tian Gary",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "priority": {
+          "self": "https://jira.shopee.io/rest/api/2/priority/2",
+          "iconUrl": "https://jira.shopee.io/images/icons/priorities/high.svg",
+          "name": "High",
+          "id": "2"
+        },
+        "customfield_12411": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/76400",
+          "value": "Feature Project",
+          "id": "76400",
+          "disabled": false
+        },
+        "customfield_35604": {
+          "self": "https://jira.shopee.io/rest/api/2/customFieldOption/64127",
+          "value": "Chat Seller Management",
+          "id": "64127",
+          "disabled": false
+        },
+        "status": {
+          "self": "https://jira.shopee.io/rest/api/2/status/1",
+          "description": "TPM Review if the requirement needs to be supported.",
+          "iconUrl": "https://jira.shopee.io/images/icons/statuses/open.png",
+          "name": "Waiting",
+          "id": "1",
+          "statusCategory": {
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/2",
+            "id": 2,
+            "key": "new",
+            "colorName": "blue-gray",
+            "name": "To Do"
+          }
+        }
+      }
+    },
+    {
+      "expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
       "id": "10483702",
       "self": "https://jira.shopee.io/rest/api/2/issue/10483702",
       "key": "SPCB-66577",
@@ -32523,17 +33615,17 @@
         },
         "customfield_15707": null,
         "assignee": {
-          "self": "https://jira.shopee.io/rest/api/2/user?username=pengbin.feng%40shopee.com",
-          "name": "pengbin.feng@shopee.com",
-          "key": "JIRAUSER129519",
-          "emailAddress": "pengbin.feng@shopee.com",
+          "self": "https://jira.shopee.io/rest/api/2/user?username=danqian.wang%40shopee.com",
+          "name": "danqian.wang@shopee.com",
+          "key": "JIRAUSER37226",
+          "emailAddress": "danqian.wang@shopee.com",
           "avatarUrls": {
-            "48x48": "https://www.gravatar.com/avatar/86f108b913841db404f1a0006ce1a6ad?d=mm&s=48",
-            "24x24": "https://www.gravatar.com/avatar/86f108b913841db404f1a0006ce1a6ad?d=mm&s=24",
-            "16x16": "https://www.gravatar.com/avatar/86f108b913841db404f1a0006ce1a6ad?d=mm&s=16",
-            "32x32": "https://www.gravatar.com/avatar/86f108b913841db404f1a0006ce1a6ad?d=mm&s=32"
+            "48x48": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=32"
           },
-          "displayName": "Pengbin Feng",
+          "displayName": "danqian.wang@shopee.com",
           "active": true,
           "timeZone": "Asia/Singapore"
         },
@@ -32578,8 +33670,8 @@
       "key": "SPCB-66522",
       "fields": {
         "summary": "【Dev自测】One-click subscription to VIP on MP Checkout via COD - Chatbot-CS [Epic for Solution Automation]",
-        "customfield_11546": null,
-        "customfield_36701": null,
+        "customfield_11546": "2026-04-10",
+        "customfield_36701": "2026-04-10",
         "components": [
           {
             "self": "https://jira.shopee.io/rest/api/2/component/116874",
@@ -32637,17 +33729,17 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/1",
-          "description": "TPM Review if the requirement needs to be supported.",
-          "iconUrl": "https://jira.shopee.io/images/icons/statuses/open.png",
-          "name": "Waiting",
-          "id": "1",
+          "self": "https://jira.shopee.io/rest/api/2/status/10002",
+          "description": "The development of this issue was completed and released.",
+          "iconUrl": "https://jira.shopee.io/",
+          "name": "Done",
+          "id": "10002",
           "statusCategory": {
-            "self": "https://jira.shopee.io/rest/api/2/statuscategory/2",
-            "id": 2,
-            "key": "new",
-            "colorName": "blue-gray",
-            "name": "To Do"
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/3",
+            "id": 3,
+            "key": "done",
+            "colorName": "green",
+            "name": "Done"
           }
         }
       }
@@ -33253,17 +34345,17 @@
         },
         "customfield_15707": null,
         "assignee": {
-          "self": "https://jira.shopee.io/rest/api/2/user?username=junhao.wu%40shopee.com",
-          "name": "junhao.wu@shopee.com",
-          "key": "JIRAUSER56257",
-          "emailAddress": "junhao.wu@shopee.com",
+          "self": "https://jira.shopee.io/rest/api/2/user?username=xi.cen%40shopee.com",
+          "name": "xi.cen@shopee.com",
+          "key": "JIRAUSER51642",
+          "emailAddress": "xi.cen@shopee.com",
           "avatarUrls": {
-            "48x48": "https://www.gravatar.com/avatar/f2a84540f9fc92406b68496ba4135206?d=mm&s=48",
-            "24x24": "https://www.gravatar.com/avatar/f2a84540f9fc92406b68496ba4135206?d=mm&s=24",
-            "16x16": "https://www.gravatar.com/avatar/f2a84540f9fc92406b68496ba4135206?d=mm&s=16",
-            "32x32": "https://www.gravatar.com/avatar/f2a84540f9fc92406b68496ba4135206?d=mm&s=32"
+            "48x48": "https://www.gravatar.com/avatar/97a97ae8feb0e0ee3f61fe5e9d3f8900?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/97a97ae8feb0e0ee3f61fe5e9d3f8900?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/97a97ae8feb0e0ee3f61fe5e9d3f8900?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/97a97ae8feb0e0ee3f61fe5e9d3f8900?d=mm&s=32"
           },
-          "displayName": "junhao.wu@shopee.com",
+          "displayName": "Xi Cen",
           "active": true,
           "timeZone": "Asia/Singapore"
         },
@@ -33561,33 +34653,33 @@
           }
         ],
         "customfield_10306": {
-          "self": "https://jira.shopee.io/rest/api/2/user?username=jialun.lv%40shopee.com",
-          "name": "jialun.lv@shopee.com",
-          "key": "JIRAUSER159915",
-          "emailAddress": "jialun.lv@shopee.com",
+          "self": "https://jira.shopee.io/rest/api/2/user?username=xi.cen%40shopee.com",
+          "name": "xi.cen@shopee.com",
+          "key": "JIRAUSER51642",
+          "emailAddress": "xi.cen@shopee.com",
           "avatarUrls": {
-            "48x48": "https://www.gravatar.com/avatar/1377f4443c8b416d0aa1c0677f42a2e0?d=mm&s=48",
-            "24x24": "https://www.gravatar.com/avatar/1377f4443c8b416d0aa1c0677f42a2e0?d=mm&s=24",
-            "16x16": "https://www.gravatar.com/avatar/1377f4443c8b416d0aa1c0677f42a2e0?d=mm&s=16",
-            "32x32": "https://www.gravatar.com/avatar/1377f4443c8b416d0aa1c0677f42a2e0?d=mm&s=32"
+            "48x48": "https://www.gravatar.com/avatar/97a97ae8feb0e0ee3f61fe5e9d3f8900?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/97a97ae8feb0e0ee3f61fe5e9d3f8900?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/97a97ae8feb0e0ee3f61fe5e9d3f8900?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/97a97ae8feb0e0ee3f61fe5e9d3f8900?d=mm&s=32"
           },
-          "displayName": "Jialun Lv",
+          "displayName": "Xi Cen",
           "active": true,
           "timeZone": "Asia/Singapore"
         },
         "customfield_15707": null,
         "assignee": {
-          "self": "https://jira.shopee.io/rest/api/2/user?username=jialun.lv%40shopee.com",
-          "name": "jialun.lv@shopee.com",
-          "key": "JIRAUSER159915",
-          "emailAddress": "jialun.lv@shopee.com",
+          "self": "https://jira.shopee.io/rest/api/2/user?username=junhao.wu%40shopee.com",
+          "name": "junhao.wu@shopee.com",
+          "key": "JIRAUSER56257",
+          "emailAddress": "junhao.wu@shopee.com",
           "avatarUrls": {
-            "48x48": "https://www.gravatar.com/avatar/1377f4443c8b416d0aa1c0677f42a2e0?d=mm&s=48",
-            "24x24": "https://www.gravatar.com/avatar/1377f4443c8b416d0aa1c0677f42a2e0?d=mm&s=24",
-            "16x16": "https://www.gravatar.com/avatar/1377f4443c8b416d0aa1c0677f42a2e0?d=mm&s=16",
-            "32x32": "https://www.gravatar.com/avatar/1377f4443c8b416d0aa1c0677f42a2e0?d=mm&s=32"
+            "48x48": "https://www.gravatar.com/avatar/f2a84540f9fc92406b68496ba4135206?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/f2a84540f9fc92406b68496ba4135206?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/f2a84540f9fc92406b68496ba4135206?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/f2a84540f9fc92406b68496ba4135206?d=mm&s=32"
           },
-          "displayName": "Jialun Lv",
+          "displayName": "junhao.wu@shopee.com",
           "active": true,
           "timeZone": "Asia/Singapore"
         },
@@ -33874,7 +34966,7 @@
       "self": "https://jira.shopee.io/rest/api/2/issue/10449057",
       "key": "SPCB-66334",
       "fields": {
-        "summary": "Phase 2 - AI Supervision - Agent Assistant Adapt to Smart KB - 9 - Constrain model not output \"Choki\" - Chatbot-Platform [Epic for Chatbot Knowledge]",
+        "summary": "Restrict special wording and language",
         "customfield_11546": null,
         "customfield_36701": "2026-04-17",
         "components": [
@@ -33934,17 +35026,17 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/1",
-          "description": "TPM Review if the requirement needs to be supported.",
-          "iconUrl": "https://jira.shopee.io/images/icons/statuses/open.png",
-          "name": "Waiting",
-          "id": "1",
+          "self": "https://jira.shopee.io/rest/api/2/status/10701",
+          "description": "",
+          "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
+          "name": "PRD",
+          "id": "10701",
           "statusCategory": {
-            "self": "https://jira.shopee.io/rest/api/2/statuscategory/2",
-            "id": 2,
-            "key": "new",
-            "colorName": "blue-gray",
-            "name": "To Do"
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
+            "id": 4,
+            "key": "indeterminate",
+            "colorName": "yellow",
+            "name": "In Progress"
           }
         }
       }
@@ -34047,17 +35139,17 @@
           }
         ],
         "customfield_10306": {
-          "self": "https://jira.shopee.io/rest/api/2/user?username=danqian.wang%40shopee.com",
-          "name": "danqian.wang@shopee.com",
-          "key": "JIRAUSER37226",
-          "emailAddress": "danqian.wang@shopee.com",
+          "self": "https://jira.shopee.io/rest/api/2/user?username=mengchen.tang%40shopee.com",
+          "name": "mengchen.tang@shopee.com",
+          "key": "JIRAUSER38431",
+          "emailAddress": "mengchen.tang@shopee.com",
           "avatarUrls": {
-            "48x48": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=48",
-            "24x24": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=24",
-            "16x16": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=16",
-            "32x32": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=32"
+            "48x48": "https://www.gravatar.com/avatar/bb87b0bfb630af39f2ba32de9fee5af6?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/bb87b0bfb630af39f2ba32de9fee5af6?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/bb87b0bfb630af39f2ba32de9fee5af6?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/bb87b0bfb630af39f2ba32de9fee5af6?d=mm&s=32"
           },
-          "displayName": "danqian.wang@shopee.com",
+          "displayName": "mengchen.tang@shopee.com",
           "active": true,
           "timeZone": "Asia/Singapore"
         },
@@ -34291,22 +35383,6 @@
           }
         ],
         "customfield_10306": {
-          "self": "https://jira.shopee.io/rest/api/2/user?username=danqian.wang%40shopee.com",
-          "name": "danqian.wang@shopee.com",
-          "key": "JIRAUSER37226",
-          "emailAddress": "danqian.wang@shopee.com",
-          "avatarUrls": {
-            "48x48": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=48",
-            "24x24": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=24",
-            "16x16": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=16",
-            "32x32": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=32"
-          },
-          "displayName": "danqian.wang@shopee.com",
-          "active": true,
-          "timeZone": "Asia/Singapore"
-        },
-        "customfield_15707": null,
-        "assignee": {
           "self": "https://jira.shopee.io/rest/api/2/user?username=jiamin.qi%40shopee.com",
           "name": "jiamin.qi@shopee.com",
           "key": "JIRAUSER79030",
@@ -34318,6 +35394,22 @@
             "32x32": "https://jira.shopee.io/secure/useravatar?size=medium&avatarId=10337"
           },
           "displayName": "jiamin.qi@shopee.com",
+          "active": true,
+          "timeZone": "Asia/Singapore"
+        },
+        "customfield_15707": null,
+        "assignee": {
+          "self": "https://jira.shopee.io/rest/api/2/user?username=danqian.wang%40shopee.com",
+          "name": "danqian.wang@shopee.com",
+          "key": "JIRAUSER37226",
+          "emailAddress": "danqian.wang@shopee.com",
+          "avatarUrls": {
+            "48x48": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=32"
+          },
+          "displayName": "danqian.wang@shopee.com",
           "active": true,
           "timeZone": "Asia/Singapore"
         },
@@ -34907,11 +35999,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/11402",
-          "description": "",
+          "self": "https://jira.shopee.io/rest/api/2/status/10303",
+          "description": "Common Biz FE Component Update according to the new standard",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "TECH DESIGN",
-          "id": "11402",
+          "name": "Developing",
+          "id": "10303",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -34988,11 +36080,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/11402",
-          "description": "",
+          "self": "https://jira.shopee.io/rest/api/2/status/10303",
+          "description": "Common Biz FE Component Update according to the new standard",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "TECH DESIGN",
-          "id": "11402",
+          "name": "Developing",
+          "id": "10303",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -35009,7 +36101,7 @@
       "self": "https://jira.shopee.io/rest/api/2/issue/10381162",
       "key": "SPCB-65661",
       "fields": {
-        "summary": "Business AI Assistant - Performance Diagnosis & Proactive Program Reach Out - Chatbot-CS [Epic for UIUX]",
+        "summary": "DRM New Market Expansion - TH",
         "customfield_11546": "2026-04-03",
         "customfield_36701": "2026-04-07",
         "components": [
@@ -35171,7 +36263,7 @@
       "self": "https://jira.shopee.io/rest/api/2/issue/10381159",
       "key": "SPCB-65659",
       "fields": {
-        "summary": "[FRF] [Phase 1] VN Business AI Assistant - Chatbot-CS [Epic for UIUX]",
+        "summary": "DRM New Market Expansion - VN",
         "customfield_11546": "2026-04-03",
         "customfield_36701": "2026-04-07",
         "components": [
@@ -35393,11 +36485,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/10701",
+          "self": "https://jira.shopee.io/rest/api/2/status/11402",
           "description": "",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "PRD",
-          "id": "10701",
+          "name": "TECH DESIGN",
+          "id": "11402",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -35830,17 +36922,17 @@
           }
         ],
         "customfield_10306": {
-          "self": "https://jira.shopee.io/rest/api/2/user?username=xinlei.lv%40shopee.com",
-          "name": "xinlei.lv@shopee.com",
-          "key": "JIRAUSER168834",
-          "emailAddress": "xinlei.lv@shopee.com",
+          "self": "https://jira.shopee.io/rest/api/2/user?username=miaofeng.gao%40shopee.com",
+          "name": "miaofeng.gao@shopee.com",
+          "key": "JIRAUSER173316",
+          "emailAddress": "miaofeng.gao@shopee.com",
           "avatarUrls": {
-            "48x48": "https://www.gravatar.com/avatar/9902dfd4b95304e6616dad9d551f7c83?d=mm&s=48",
-            "24x24": "https://www.gravatar.com/avatar/9902dfd4b95304e6616dad9d551f7c83?d=mm&s=24",
-            "16x16": "https://www.gravatar.com/avatar/9902dfd4b95304e6616dad9d551f7c83?d=mm&s=16",
-            "32x32": "https://www.gravatar.com/avatar/9902dfd4b95304e6616dad9d551f7c83?d=mm&s=32"
+            "48x48": "https://www.gravatar.com/avatar/2fa69ffa21d04832f45294962b696562?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/2fa69ffa21d04832f45294962b696562?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/2fa69ffa21d04832f45294962b696562?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/2fa69ffa21d04832f45294962b696562?d=mm&s=32"
           },
-          "displayName": "Xinlei Lv",
+          "displayName": "Miaofeng Gao",
           "active": true,
           "timeZone": "Asia/Singapore"
         },
@@ -36365,17 +37457,17 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/1",
-          "description": "TPM Review if the requirement needs to be supported.",
-          "iconUrl": "https://jira.shopee.io/images/icons/statuses/open.png",
-          "name": "Waiting",
-          "id": "1",
+          "self": "https://jira.shopee.io/rest/api/2/status/10002",
+          "description": "The development of this issue was completed and released.",
+          "iconUrl": "https://jira.shopee.io/",
+          "name": "Done",
+          "id": "10002",
           "statusCategory": {
-            "self": "https://jira.shopee.io/rest/api/2/statuscategory/2",
-            "id": 2,
-            "key": "new",
-            "colorName": "blue-gray",
-            "name": "To Do"
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/3",
+            "id": 3,
+            "key": "done",
+            "colorName": "green",
+            "name": "Done"
           }
         }
       }
@@ -36631,7 +37723,7 @@
       "fields": {
         "summary": "Automate CS LGPD Non-Compliant Enquiries - Chatbot-CS [Epic for Solution Automation]",
         "customfield_11546": null,
-        "customfield_36701": null,
+        "customfield_36701": "2026-04-24",
         "components": [
           {
             "self": "https://jira.shopee.io/rest/api/2/component/116874",
@@ -36640,17 +37732,17 @@
           }
         ],
         "customfield_10306": {
-          "self": "https://jira.shopee.io/rest/api/2/user?username=danqian.wang%40shopee.com",
-          "name": "danqian.wang@shopee.com",
-          "key": "JIRAUSER37226",
-          "emailAddress": "danqian.wang@shopee.com",
+          "self": "https://jira.shopee.io/rest/api/2/user?username=mengchen.tang%40shopee.com",
+          "name": "mengchen.tang@shopee.com",
+          "key": "JIRAUSER38431",
+          "emailAddress": "mengchen.tang@shopee.com",
           "avatarUrls": {
-            "48x48": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=48",
-            "24x24": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=24",
-            "16x16": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=16",
-            "32x32": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=32"
+            "48x48": "https://www.gravatar.com/avatar/bb87b0bfb630af39f2ba32de9fee5af6?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/bb87b0bfb630af39f2ba32de9fee5af6?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/bb87b0bfb630af39f2ba32de9fee5af6?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/bb87b0bfb630af39f2ba32de9fee5af6?d=mm&s=32"
           },
-          "displayName": "danqian.wang@shopee.com",
+          "displayName": "mengchen.tang@shopee.com",
           "active": true,
           "timeZone": "Asia/Singapore"
         },
@@ -36770,17 +37862,17 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/1",
-          "description": "TPM Review if the requirement needs to be supported.",
-          "iconUrl": "https://jira.shopee.io/images/icons/statuses/open.png",
-          "name": "Waiting",
-          "id": "1",
+          "self": "https://jira.shopee.io/rest/api/2/status/10002",
+          "description": "The development of this issue was completed and released.",
+          "iconUrl": "https://jira.shopee.io/",
+          "name": "Done",
+          "id": "10002",
           "statusCategory": {
-            "self": "https://jira.shopee.io/rest/api/2/statuscategory/2",
-            "id": 2,
-            "key": "new",
-            "colorName": "blue-gray",
-            "name": "To Do"
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/3",
+            "id": 3,
+            "key": "done",
+            "colorName": "green",
+            "name": "Done"
           }
         }
       }
@@ -36851,17 +37943,17 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/10601",
-          "description": "",
-          "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "UAT",
-          "id": "10601",
+          "self": "https://jira.shopee.io/rest/api/2/status/10002",
+          "description": "The development of this issue was completed and released.",
+          "iconUrl": "https://jira.shopee.io/",
+          "name": "Done",
+          "id": "10002",
           "statusCategory": {
-            "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
-            "id": 4,
-            "key": "indeterminate",
-            "colorName": "yellow",
-            "name": "In Progress"
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/3",
+            "id": 3,
+            "key": "done",
+            "colorName": "green",
+            "name": "Done"
           }
         }
       }
@@ -37581,11 +38673,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/11402",
+          "self": "https://jira.shopee.io/rest/api/2/status/11800",
           "description": "",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "TECH DESIGN",
-          "id": "11402",
+          "name": "LIVE TESTING",
+          "id": "11800",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -37911,17 +39003,17 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/10003",
-          "description": "This issue is under testing by QA in testing environment",
-          "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "Testing",
-          "id": "10003",
+          "self": "https://jira.shopee.io/rest/api/2/status/10002",
+          "description": "The development of this issue was completed and released.",
+          "iconUrl": "https://jira.shopee.io/",
+          "name": "Done",
+          "id": "10002",
           "statusCategory": {
-            "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
-            "id": 4,
-            "key": "indeterminate",
-            "colorName": "yellow",
-            "name": "In Progress"
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/3",
+            "id": 3,
+            "key": "done",
+            "colorName": "green",
+            "name": "Done"
           }
         }
       }
@@ -38348,17 +39440,17 @@
           }
         ],
         "customfield_10306": {
-          "self": "https://jira.shopee.io/rest/api/2/user?username=xun.li%40shopee.com",
-          "name": "xun.li@shopee.com",
-          "key": "JIRAUSER144325",
-          "emailAddress": "xun.li@shopee.com",
+          "self": "https://jira.shopee.io/rest/api/2/user?username=danqian.wang%40shopee.com",
+          "name": "danqian.wang@shopee.com",
+          "key": "JIRAUSER37226",
+          "emailAddress": "danqian.wang@shopee.com",
           "avatarUrls": {
-            "48x48": "https://www.gravatar.com/avatar/dac73697f9e3f7639034544b013f77ae?d=mm&s=48",
-            "24x24": "https://www.gravatar.com/avatar/dac73697f9e3f7639034544b013f77ae?d=mm&s=24",
-            "16x16": "https://www.gravatar.com/avatar/dac73697f9e3f7639034544b013f77ae?d=mm&s=16",
-            "32x32": "https://www.gravatar.com/avatar/dac73697f9e3f7639034544b013f77ae?d=mm&s=32"
+            "48x48": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=48",
+            "24x24": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=24",
+            "16x16": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=16",
+            "32x32": "https://www.gravatar.com/avatar/f5c7dd0dc09e0b1eb33abcf4b05fcdeb?d=mm&s=32"
           },
-          "displayName": "Xun Li",
+          "displayName": "danqian.wang@shopee.com",
           "active": true,
           "timeZone": "Asia/Singapore"
         },
@@ -39045,17 +40137,17 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/10003",
-          "description": "This issue is under testing by QA in testing environment",
-          "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "Testing",
-          "id": "10003",
+          "self": "https://jira.shopee.io/rest/api/2/status/10002",
+          "description": "The development of this issue was completed and released.",
+          "iconUrl": "https://jira.shopee.io/",
+          "name": "Done",
+          "id": "10002",
           "statusCategory": {
-            "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
-            "id": 4,
-            "key": "indeterminate",
-            "colorName": "yellow",
-            "name": "In Progress"
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/3",
+            "id": 3,
+            "key": "done",
+            "colorName": "green",
+            "name": "Done"
           }
         }
       }
@@ -41751,7 +42843,7 @@
       "key": "SPCB-62125",
       "fields": {
         "summary": "Implement Order Prediction Model for Buyer AA - Chatbot-CS [Epic for Intent prediction]",
-        "customfield_11546": "2025-12-26",
+        "customfield_11546": "2026-01-20",
         "customfield_36701": null,
         "components": [
           {
@@ -43679,11 +44771,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/11402",
-          "description": "",
+          "self": "https://jira.shopee.io/rest/api/2/status/10303",
+          "description": "Common Biz FE Component Update according to the new standard",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "TECH DESIGN",
-          "id": "11402",
+          "name": "Developing",
+          "id": "10303",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -43711,33 +44803,33 @@
           }
         ],
         "customfield_10306": {
-          "self": "https://jira.shopee.io/rest/api/2/user?username=zhengxin.pan%40shopee.com",
-          "name": "zhengxin.pan@shopee.com",
-          "key": "JIRAUSER164412",
-          "emailAddress": "zhengxin.pan@shopee.com",
+          "self": "https://jira.shopee.io/rest/api/2/user?username=jiamin.qi%40shopee.com",
+          "name": "jiamin.qi@shopee.com",
+          "key": "JIRAUSER79030",
+          "emailAddress": "jiamin.qi@shopee.com",
           "avatarUrls": {
-            "48x48": "https://www.gravatar.com/avatar/51c43e907816af4bd5bdb976066491eb?d=mm&s=48",
-            "24x24": "https://www.gravatar.com/avatar/51c43e907816af4bd5bdb976066491eb?d=mm&s=24",
-            "16x16": "https://www.gravatar.com/avatar/51c43e907816af4bd5bdb976066491eb?d=mm&s=16",
-            "32x32": "https://www.gravatar.com/avatar/51c43e907816af4bd5bdb976066491eb?d=mm&s=32"
+            "48x48": "https://jira.shopee.io/secure/useravatar?avatarId=10337",
+            "24x24": "https://jira.shopee.io/secure/useravatar?size=small&avatarId=10337",
+            "16x16": "https://jira.shopee.io/secure/useravatar?size=xsmall&avatarId=10337",
+            "32x32": "https://jira.shopee.io/secure/useravatar?size=medium&avatarId=10337"
           },
-          "displayName": "Zhengxin Pan",
+          "displayName": "jiamin.qi@shopee.com",
           "active": true,
           "timeZone": "Asia/Singapore"
         },
         "customfield_15707": "https://confluence.shopee.io/display/CHATBOT/Improve+Penalty+Points+Appeal+skills+in+Seller+Chatbot",
         "assignee": {
-          "self": "https://jira.shopee.io/rest/api/2/user?username=zhengxin.pan%40shopee.com",
-          "name": "zhengxin.pan@shopee.com",
-          "key": "JIRAUSER164412",
-          "emailAddress": "zhengxin.pan@shopee.com",
+          "self": "https://jira.shopee.io/rest/api/2/user?username=jiamin.qi%40shopee.com",
+          "name": "jiamin.qi@shopee.com",
+          "key": "JIRAUSER79030",
+          "emailAddress": "jiamin.qi@shopee.com",
           "avatarUrls": {
-            "48x48": "https://www.gravatar.com/avatar/51c43e907816af4bd5bdb976066491eb?d=mm&s=48",
-            "24x24": "https://www.gravatar.com/avatar/51c43e907816af4bd5bdb976066491eb?d=mm&s=24",
-            "16x16": "https://www.gravatar.com/avatar/51c43e907816af4bd5bdb976066491eb?d=mm&s=16",
-            "32x32": "https://www.gravatar.com/avatar/51c43e907816af4bd5bdb976066491eb?d=mm&s=32"
+            "48x48": "https://jira.shopee.io/secure/useravatar?avatarId=10337",
+            "24x24": "https://jira.shopee.io/secure/useravatar?size=small&avatarId=10337",
+            "16x16": "https://jira.shopee.io/secure/useravatar?size=xsmall&avatarId=10337",
+            "32x32": "https://jira.shopee.io/secure/useravatar?size=medium&avatarId=10337"
           },
-          "displayName": "Zhengxin Pan",
+          "displayName": "jiamin.qi@shopee.com",
           "active": true,
           "timeZone": "Asia/Singapore"
         },
@@ -45078,7 +46170,7 @@
       "key": "SPCB-60161",
       "fields": {
         "summary": "Seller KYC Automation & Status Verification via Chatbot - Chatbot-CS [Epic for Solution Automation]",
-        "customfield_11546": "2025-12-26",
+        "customfield_11546": "2026-01-29",
         "customfield_36701": "2025-12-26",
         "components": [
           {
@@ -45483,7 +46575,7 @@
       "key": "SPCB-59959",
       "fields": {
         "summary": "Seller UIUX Enhancement Phase 1 - Chatbot-CS [Epic for UIUX]",
-        "customfield_11546": "2025-11-14",
+        "customfield_11546": "2025-11-19",
         "customfield_36701": "2025-11-18",
         "components": [
           {
@@ -46191,11 +47283,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/10303",
-          "description": "Common Biz FE Component Update according to the new standard",
+          "self": "https://jira.shopee.io/rest/api/2/status/10601",
+          "description": "",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "Developing",
-          "id": "10303",
+          "name": "UAT",
+          "id": "10601",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -60412,11 +61504,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/11402",
-          "description": "",
+          "self": "https://jira.shopee.io/rest/api/2/status/10303",
+          "description": "Common Biz FE Component Update according to the new standard",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "TECH DESIGN",
-          "id": "11402",
+          "name": "Developing",
+          "id": "10303",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -60575,17 +61667,17 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/10601",
-          "description": "",
-          "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "UAT",
-          "id": "10601",
+          "self": "https://jira.shopee.io/rest/api/2/status/10002",
+          "description": "The development of this issue was completed and released.",
+          "iconUrl": "https://jira.shopee.io/",
+          "name": "Done",
+          "id": "10002",
           "statusCategory": {
-            "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
-            "id": 4,
-            "key": "indeterminate",
-            "colorName": "yellow",
-            "name": "In Progress"
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/3",
+            "id": 3,
+            "key": "done",
+            "colorName": "green",
+            "name": "Done"
           }
         }
       }
@@ -60821,11 +61913,11 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/10303",
-          "description": "Common Biz FE Component Update according to the new standard",
+          "self": "https://jira.shopee.io/rest/api/2/status/10003",
+          "description": "This issue is under testing by QA in testing environment",
           "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "Developing",
-          "id": "10303",
+          "name": "Testing",
+          "id": "10003",
           "statusCategory": {
             "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
             "id": 4,
@@ -68282,17 +69374,17 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/11800",
-          "description": "",
-          "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "LIVE TESTING",
-          "id": "11800",
+          "self": "https://jira.shopee.io/rest/api/2/status/10002",
+          "description": "The development of this issue was completed and released.",
+          "iconUrl": "https://jira.shopee.io/",
+          "name": "Done",
+          "id": "10002",
           "statusCategory": {
-            "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
-            "id": 4,
-            "key": "indeterminate",
-            "colorName": "yellow",
-            "name": "In Progress"
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/3",
+            "id": 3,
+            "key": "done",
+            "colorName": "green",
+            "name": "Done"
           }
         }
       }
