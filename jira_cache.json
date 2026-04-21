@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-04-21T14:58:34.901141",
+  "synced_at": "2026-04-21T15:50:25.142827",
   "jql": "project in (SPCB, SPCSP) AND issuetype = Epic AND \"Project Type\" = \"Feature Project\" AND \"POP Request Link\" is not EMPTY AND status not in (Closed, Icebox) AND created >= 2025-01-01 AND (priority in (Highest, High) OR (priority in (Medium, Low) AND \"Key Project\" is not EMPTY))",
   "total": 868,
   "issues": [
@@ -36890,17 +36890,17 @@
           "disabled": false
         },
         "status": {
-          "self": "https://jira.shopee.io/rest/api/2/status/10601",
-          "description": "",
-          "iconUrl": "https://jira.shopee.io/images/icons/statuses/generic.png",
-          "name": "UAT",
-          "id": "10601",
+          "self": "https://jira.shopee.io/rest/api/2/status/10002",
+          "description": "The development of this issue was completed and released.",
+          "iconUrl": "https://jira.shopee.io/",
+          "name": "Done",
+          "id": "10002",
           "statusCategory": {
-            "self": "https://jira.shopee.io/rest/api/2/statuscategory/4",
-            "id": 4,
-            "key": "indeterminate",
-            "colorName": "yellow",
-            "name": "In Progress"
+            "self": "https://jira.shopee.io/rest/api/2/statuscategory/3",
+            "id": 3,
+            "key": "done",
+            "colorName": "green",
+            "name": "Done"
           }
         }
       }
