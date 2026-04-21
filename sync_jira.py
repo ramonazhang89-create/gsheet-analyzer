@@ -78,28 +78,38 @@ def build_jql(projects: list[str], year: str = JIRA_YEAR) -> str:
 
 def fetch_all_issues(token: str, jql: str) -> list[dict]:
     import urllib.request
-    import urllib.parse
     import urllib.error
 
     all_issues: list[dict] = []
     start_at = 0
     max_results = 1500
+    page_size = 100
 
     while True:
-        params = urllib.parse.urlencode({
+        body = json.dumps({
             "jql": jql,
-            "fields": ",".join(JIRA_SEARCH_FIELDS),
-            "maxResults": min(100, max_results - len(all_issues)),
+            "fields": JIRA_SEARCH_FIELDS,
+            "maxResults": min(page_size, max_results - len(all_issues)),
             "startAt": start_at,
-        })
-        url = f"{JIRA_BASE_URL}/rest/api/2/search?{params}"
-        req = urllib.request.Request(url, headers={
-            "Authorization": f"Bearer {token}",
-            "Accept": "application/json",
-        })
+        }).encode("utf-8")
+        req = urllib.request.Request(
+            f"{JIRA_BASE_URL}/rest/api/2/search",
+            data=body,
+            method="POST",
+            headers={
+                "Authorization": f"Bearer {token}",
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+            },
+        )
 
-        with urllib.request.urlopen(req, timeout=30) as resp:
-            data = json.loads(resp.read().decode())
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                data = json.loads(resp.read().decode())
+        except urllib.error.HTTPError as e:
+            err_body = e.read().decode(errors="replace")
+            print(f"HTTP {e.code} at startAt={start_at}: {err_body}")
+            raise
 
         issues = data.get("issues", [])
         all_issues.extend(issues)
